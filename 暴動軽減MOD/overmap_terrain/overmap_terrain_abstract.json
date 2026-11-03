@@ -1,0 +1,13 @@
+[
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_cemetery",
+    "see_cost": "medium",
+    "copy-from": "generic_city_building",
+    "name": "cemetery",
+    "land_use_code": "cemetery",
+    "sym": "n",
+    "color": "white",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  }
+]

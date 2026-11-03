@@ -1,0 +1,187 @@
+[
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_city_building_no_sidewalk",
+    "name": "city building",
+    "sym": "^",
+    "vision_levels": "city_building",
+    "extras": "build",
+    "mondensity": 2,
+    "see_cost": "high",
+    "flags": [ "RISK_HIGH", "GENERIC_LOOT" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_city_building",
+    "copy-from": "generic_city_building_no_sidewalk",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "extend": { "flags": [ "SIDEWALK" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_city_building_roof",
+    "copy-from": "generic_city_building_no_sidewalk",
+    "extend": { "flags": [ "SIDEWALK" ] },
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "s_garage", "s_garage_1", "s_garage_2" ],
+    "copy-from": "generic_city_building",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "name": "garage",
+    "sym": "O",
+    "color": "white",
+    "extend": { "flags": [ "SOURCE_VEHICLES", "SOURCE_FABRICATION" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "s_garage_roof", "s_garage_roof_1", "s_garage_roof_2", "s_garage_upper_roof_2" ],
+    "copy-from": "generic_city_building",
+    "name": "garage roof",
+    "sym": "O",
+    "color": "white",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lighthouse_ground",
+    "copy-from": "lighthouse_abstract",
+    "flags": [ "RISK_LOW", "SOURCE_SAFETY" ]
+  },
+
+
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "bandit_camp_1",
+      "bandit_camp_2",
+      "bandit_camp_3",
+      "bandit_camp_4",
+      "bandit_camp_1_roof",
+      "bandit_camp_2_roof",
+      "bandit_camp_3_roof",
+      "bandit_camp_4_roof"
+    ],
+    "vision_levels": "isolated_building",
+    "name": "wooden fort",
+    "sym": "+",
+    "color": "brown",
+    "see_cost": "high",
+    "flags": [ "RISK_LOW", "SOURCE_SAFETY", "PP_GENERATE_RIOT_DAMAGE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "bandit_farm_3",
+      "bandit_farm_3_roof",
+      "bandit_farm_2",
+      "bandit_farm_2_roof",
+      "bandit_farm_1",
+      "bandit_farm_6",
+      "bandit_farm_5",
+      "bandit_farm_4",
+      "bandit_farm_9",
+      "bandit_farm_8",
+      "bandit_farm_7"
+    ],
+    "vision_levels": "isolated_building",
+    "name": "farm",
+    "sym": "#",
+    "color": "brown",
+    "see_cost": "high",
+    "//": "RISK_LOW due to risk and safety being based on NPCs perception of what the area may contain",
+    "flags": [ "RISK_LOW", "SOURCE_SAFETY", "PP_GENERATE_RIOT_DAMAGE"  ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "desolatebarn",
+    "copy-from": "generic_city_building_no_sidewalk",
+    "vision_levels": "isolated_building",
+    "name": "desolate barn",
+    "sym": "B",
+    "color": "brown",
+    "extend": { "flags": [ "RISK_LOW", "SOURCE_SAFETY" ] },
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "bandit_garage_1", "bandit_garage_2", "bandit_garage_1_roof", "bandit_garage_2_roof" ],
+    "vision_levels": "isolated_building",
+    "name": "garage",
+    "sym": "O",
+    "color": "white",
+    "see_cost": "high",
+    "flags": [ "SOURCE_SAFETY", "SOURCE_FOOD", "PP_GENERATE_RIOT_DAMAGE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "ws_giant_sinkhole_1",
+    "copy-from": "generic_giant_sinkhole",
+    "name": "giant sinkhole",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "ws_giant_sinkhole_2",
+    "copy-from": "generic_giant_sinkhole",
+    "name": "giant sinkhole base",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cs_public_space",
+    "copy-from": "generic_city_building",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "name": "public space",
+    "sym": "g",
+    "color": "light_green"
+  },
+
+  {
+    "type": "overmap_terrain",
+    "id": "sub_station",
+    "name": "subway station",
+    "copy-from": "sub_station",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "vision_levels": "city_building"
+  },
+
+  {
+    "type": "overmap_terrain",
+    "id": "sewer_sub_station",
+    "copy-from": "sewer_sub_station",
+    "name": "subway station (sewer level)",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "vision_levels": "underground_dirt"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "underground_sub_station",
+    "copy-from": "underground_sub_station",
+    "name": "subway station (underground level)",
+    "delete": { "flags": [ "PP_GENERATE_RIOT_DAMAGE" ] },
+    "vision_levels": "underground_stone"
+  },
+
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "fort_1a",
+      "fort_2a",
+      "fort_3a",
+      "fort_4a",
+      "fort_1b",
+      "fort_2b",
+      "fort_3b",
+      "fort_4b",
+      "fort_1c",
+      "fort_2c",
+      "fort_3c",
+      "fort_4c"
+    ],
+    "copy-from": "generic_bastion_fort",
+    "flags": [ "REQUIRES_PREDECESSOR", "PP_GENERATE_RIOT_DAMAGE" ]
+  }
+
+]

@@ -1,0 +1,13 @@
+[
+
+  {
+    "type": "MOD_INFO",
+    "id": "NO_RIOT",
+    "name": "暴動軽減",
+    "authors": [ "FISK" ],
+    "description": "開発版用：暴動による建物破損率を低下させます。試験品であり都市内設備が対象となっています。",
+    "category": "misc",
+    "dependencies": [ "dda" ]
+  }
+
+]
