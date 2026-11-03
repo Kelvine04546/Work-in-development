@@ -1,0 +1,439 @@
+[
+
+  {
+    "type": "palette",
+    "id": "shelter",
+    "palettes": [ "parametrized_walls_palette" ],
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "!": "t_pavement",
+      "`": "t_pavement_y",
+      "&": "t_sidewalk",
+      "-": "t_soil",
+      "+": "t_door_c",
+      "_": "t_linoleum_white",
+      ":": "t_window_domestic",
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "=": "t_door_locked_interior",
+      "4": "t_gutter_downspout"
+    },
+    "furniture": {
+      "6": "f_console",
+      "x": "f_bulletin_evac",
+      "b": "f_bench",
+      "c": "f_cupboard",
+      "l": "f_locker",
+      "S": "f_sink",
+      "%": "f_trashcan",
+      "U": "f_utility_shelf",
+      "B": "f_utility_shelf",
+      "t": "f_table",
+      "C": "f_counter"
+    },
+    "toilets": { "T": {  } },
+    "items": {
+      "l": { "item": "SUS_evac_shelter_locker", "chance": 80 },
+      "c": { "item": "SUS_evac_shelter_cabinet", "chance": 60 },
+      "S": { "item": "SUS_evac_shelter_sink", "chance": 70 },
+      "%": [
+        { "item": "shelter_supplies", "chance": 15, "repeat": [ 1, 2 ] },
+        { "item": "SUS_trash_trashcan_empty", "chance": 25 }
+      ],
+      "U": { "item": "SUS_evac_shelter_supply_closet", "chance": 70 },
+      "B": { "item": "SUS_evac_shelter_bathroom_supplies", "chance": 70 },
+      "t": { "item": "SUS_evac_shelter_table", "chance": 70 },
+      "C": { "item": "SUS_evac_shelter_bathroom_counter", "chance": 40 },
+      "_": { "item": "shelter_supplies", "chance": 1 },
+      "T": { "item": "SUS_toilet", "chance": 50 }
+    },
+     "nested": { "6": { "chunks": [ "shelter_computer" ] } }
+  },
+
+  {
+    "type": "palette",
+    "id": "shelter_used",
+    "palettes": [ "parametrized_walls_palette" ],
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "!": "t_pavement",
+      "`": "t_pavement_y",
+      "&": "t_sidewalk",
+      "-": "t_soil",
+      "+": [ "t_door_c", "t_door_b" ],
+      ".": "t_floor",
+      "_": "t_linoleum_white",
+      ":": [ "t_window_frame", "t_window_no_curtains", "t_window" ],
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "=": [ "t_door_b", "t_door_locked_interior", "t_door_c", "t_door_o" ],
+      "4": "t_gutter_downspout"
+    },
+    "furniture": {
+      "6": "f_console",
+      "x": "f_bulletin_evac",
+      "b": "f_bench",
+      "c": "f_cupboard",
+      "l": "f_locker",
+      "S": "f_sink",
+      "%": "f_trashcan",
+      "U": "f_utility_shelf",
+      "B": "f_utility_shelf",
+      "t": "f_table",
+      "C": "f_counter"
+    },
+    "toilets": { "T": {  } },
+    "items": {
+      "l": { "item": "SUS_evac_shelter_locker_used", "chance": 70 },
+      "c": { "item": "SUS_evac_shelter_cabinet_used", "chance": 50 },
+      "S": { "item": "SUS_evac_shelter_sink_used", "chance": 70 },
+      "b": [ { "item": "shelter_supplies", "chance": 2 }, { "item": "SUS_trash_floor", "chance": 2 } ],
+      ".": [
+        { "item": "shelter_supplies", "chance": 2 },
+        { "item": "SUS_trash_floor", "chance": 2 },
+        { "item": "SUS_trash_forest_manmade", "chance": 1 }
+      ],
+      "%": [ { "item": "shelter_supplies", "chance": 30, "repeat": [ 1, 2 ] }, { "item": "SUS_trash_trashcan", "chance": 50 } ],
+      "U": { "item": "SUS_evac_shelter_supply_closet_used", "chance": 70 },
+      "B": { "item": "SUS_evac_shelter_bathroom_supplies_used", "chance": 70 },
+      "t": { "item": "SUS_evac_shelter_table_used", "chance": 70 },
+      "C": { "item": "SUS_evac_shelter_bathroom_counter_used", "chance": 40 },
+      "_": [ { "item": "shelter_supplies", "chance": 2 }, { "item": "SUS_trash_floor", "chance": 2 } ],
+      "T": { "item": "SUS_toilet", "chance": 25 }
+    },
+    "nested": {
+      "6": { "chunks": [ "shelter_computer" ] },
+      "|": { "chunks": [ [ "shelter_graffiti", 10 ], [ "null", 90 ] ] },
+      "#": { "chunks": [ [ "shelter_graffiti", 10 ], [ "null", 90 ] ] },
+      ";": { "chunks": [ [ "shelter_graffiti", 10 ], [ "null", 90 ] ] },
+      "/": { "chunks": [ [ "shelter_graffiti", 10 ], [ "null", 90 ] ] }
+    }
+  },
+  {
+    "type": "palette",
+    "id": "shelter_vandal",
+    "palettes": [ "parametrized_walls_palette" ],
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "!": "t_pavement",
+      "`": "t_pavement_y",
+      "&": "t_sidewalk",
+      "-": "t_soil",
+      "+": [ "t_door_c", "t_door_b" ],
+      "_": "t_linoleum_white",
+      ":": [ "t_window_frame", "t_window_no_curtains", "t_window" ],
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "=": [ "t_door_b", "t_door_locked_interior", "t_door_c", "t_door_o" ],
+      "4": "t_gutter_downspout"
+    },
+    "furniture": {
+      "6": "f_console",
+      "x": "f_bulletin_evac",
+      "b": "f_bench",
+      "c": "f_cupboard",
+      "l": [ "f_locker", "f_wreckage" ],
+      "S": "f_sink",
+      "%": "f_trashcan",
+      "U": [ "f_utility_shelf", "f_wreckage" ],
+      "B": [ "f_utility_shelf", "f_wreckage" ],
+      "t": "f_table",
+      "C": "f_counter"
+    },
+    "toilets": { "T": {  } },
+    "items": {
+      "l": { "item": "shelter_supplies", "chance": 40 },
+      "c": [
+        { "item": "SUS_trash_floor", "chance": 1 },
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 }
+      ],
+      "b": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 1 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      ".": [ { "item": "SUS_trash_floor", "chance": 1 }, { "item": "SUS_trash_forest_manmade", "chance": 1 } ],
+      "%": [ { "item": "SUS_trash_trashcan", "chance": 20 } ],
+      "S": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      "U": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      "B": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      "t": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      "C": [
+        { "item": "softdrugs", "chance": 2 },
+        { "item": "shelter_supplies", "chance": 10 },
+        { "item": "SUS_trash_floor", "chance": 1 }
+      ],
+      "T": { "item": "SUS_toilet", "chance": 5 },
+      "_": [ { "item": "SUS_trash_floor", "chance": 1 } ]
+    },
+    "nested": {
+      "6": { "chunks": [ "shelter_computer" ] },
+      "|": { "chunks": [ [ "shelter_graffiti", 5 ], [ "general_graffiti", 20 ], [ "null", 75 ] ] },
+      "#": { "chunks": [ [ "shelter_graffiti", 5 ], [ "general_graffiti", 20 ], [ "null", 75 ] ] },
+      ";": { "chunks": [ [ "shelter_graffiti", 5 ], [ "general_graffiti", 20 ], [ "null", 75 ] ] }
+    }
+  },
+  {
+    "type": "palette",
+    "id": "shelter_survivor",
+    "palettes": [ "parametrized_walls_palette" ],
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "!": "t_pavement",
+      "`": "t_pavement_y",
+      "&": "t_sidewalk",
+      "-": "t_soil",
+      "+": "t_door_c",
+      "_": "t_linoleum_white",
+      ":": "t_window_boarded",
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "=": "t_door_locked_interior",
+      "4": "t_gutter_downspout"
+    },
+    "furniture": {
+      "6": "f_console",
+      "x": "f_bulletin_evac",
+      "b": "f_bench",
+      "c": "f_cupboard",
+      "l": "f_locker",
+      "S": "f_sink",
+      "%": "f_trashcan",
+      "U": "f_utility_shelf",
+      "B": "f_utility_shelf",
+      "t": "f_table",
+      "C": "f_counter"
+    },
+    "toilets": { "T": {  } },
+    "items": {
+      "l": { "item": "SUS_evac_shelter_locker_used", "chance": 50 },
+      "c": { "item": "SUS_evac_shelter_cabinet_used", "chance": 30 },
+      "S": { "item": "SUS_evac_shelter_sink_used", "chance": 50 },
+      "b": [ { "item": "shelter_supplies", "chance": 2 }, { "item": "SUS_trash_floor", "chance": 2 } ],
+      ".": [
+        { "item": "shelter_supplies", "chance": 2 },
+        { "item": "SUS_trash_floor", "chance": 2 },
+        { "item": "SUS_trash_forest_manmade", "chance": 1 }
+      ],
+      "%": [ { "item": "shelter_supplies", "chance": 30, "repeat": [ 1, 2 ] }, { "item": "SUS_trash_trashcan", "chance": 50 } ],
+      "U": { "item": "SUS_evac_shelter_supply_closet_used", "chance": 50 },
+      "B": { "item": "SUS_evac_shelter_bathroom_supplies_used", "chance": 50 },
+      "t": { "item": "SUS_evac_shelter_table_used", "chance": 50 },
+      "T": { "item": "SUS_toilet", "chance": 50 },
+      "C": { "item": "SUS_evac_shelter_bathroom_counter_used", "chance": 20 },
+      "_": [ { "item": "shelter_supplies", "chance": 2 }, { "item": "SUS_trash_floor", "chance": 2 } ]
+    },
+    "nested": { "6": { "chunks": [ "shelter_computer" ] } },
+    "npcs": { "@": { "class": "NPC_evac_shelter_survivor" } }
+  },
+  {
+    "type": "palette",
+    "id": "shelter_unfinished",
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "#": "t_soil",
+      "+": "t_door_frame",
+      "-": "t_wall_half",
+      "|": "t_wall_half",
+      "_": "t_linoleum_white",
+      ":": "t_window_empty",
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "4": "t_gutter_downspout",
+      ".": "t_concrete",
+      ",": "t_region_soil"
+    },
+    "furniture": {
+      "X": [ [ "f_crate_c", 2 ], "f_crate_o", "f_cardboard_box" ],
+      "~": "f_stack_plank",
+      "t": "f_tourist_table",
+      "c": "f_camp_chair",
+      "S": "f_sink",
+      "C": "f_counter",
+      "T": "f_toilet"
+    },
+    "items": {
+      "t": [
+        { "item": "power_tools", "chance": 5 },
+        { "item": "tools_construction", "chance": 12 },
+        { "item": "tools_carpentry", "chance": 5 },
+        { "item": "tools_earthworking", "chance": 2 },
+        { "item": "hardware_plumbing", "chance": 2 }
+      ],
+      "c": [
+        { "item": "clothing_work_hat", "chance": 15 },
+        { "item": "clothing_work_gloves", "chance": 12 },
+        { "item": "magazines", "chance": 2 },
+        { "item": "misc_smoking", "chance": 5 }
+      ],
+      "X": [
+        { "item": "hardware_bulk", "chance": 40, "repeat": [ 1, 3 ] },
+        { "item": "plumbing_bulk", "chance": 30, "repeat": [ 1, 2 ] }
+      ]
+    }
+  },
+  {
+    "type": "palette",
+    "id": "shelter_infested",
+    "palettes": [ "parametrized_walls_palette" ],
+    "terrain": {
+      " ": "t_region_groundcover_urban",
+      "!": "t_pavement",
+      "`": "t_pavement_y",
+      "&": "t_sidewalk",
+      "-": "t_soil",
+      "+": "t_door_c",
+      "_": "t_linoleum_white",
+      ":": [ "t_window_domestic", "t_window_boarded" ],
+      ">": "t_stairs_down",
+      "<": "t_stairs_up",
+      ";": "t_concrete_wall",
+      "/": "t_concrete_wall",
+      "*": "t_ladder_up",
+      "=": "t_door_locked_interior",
+      "4": "t_gutter_downspout"
+    },
+    "furniture": {
+      "6": "f_console",
+      "x": "f_bulletin_evac",
+      "b": "f_bench",
+      "c": "f_cupboard",
+      "l": "f_locker",
+      "S": "f_sink",
+      "%": "f_trashcan",
+      "U": "f_utility_shelf",
+      "B": "f_utility_shelf",
+      "t": "f_table",
+      "C": "f_counter"
+    },
+    "toilets": { "T": {  } },
+    "items": {
+      "l": { "item": "SUS_evac_shelter_locker", "chance": 80 },
+      "c": { "item": "SUS_evac_shelter_cabinet", "chance": 60 },
+      "S": { "item": "SUS_evac_shelter_sink", "chance": 70 },
+      "%": [
+        { "item": "shelter_supplies", "chance": 15, "repeat": [ 1, 2 ] },
+        { "item": "SUS_trash_trashcan_empty", "chance": 25 }
+      ],
+      "U": { "item": "SUS_evac_shelter_supply_closet", "chance": 70 },
+      "B": { "item": "SUS_evac_shelter_bathroom_supplies", "chance": 70 },
+      "t": { "item": "SUS_evac_shelter_table", "chance": 70 },
+      "T": { "item": "SUS_toilet", "chance": 50 },
+      "C": { "item": "SUS_evac_shelter_bathroom_counter", "chance": 40 },
+      "_": { "item": "shelter_supplies", "chance": 1 }
+    },
+    "nested": { "6": { "chunks": [ "shelter_computer" ] } },
+    "monster": { "7": { "monster": "mon_feral_human_axe", "chance": 100 }, "8": { "monster": "mon_zombie_runner", "chance": 100 } }
+  },
+  {
+    "type": "palette",
+    "id": "shelter_zombies",
+    "monsters": { "_": { "monster": "GROUP_ZOMBIE", "density": 0.0005 }, "b": { "monster": "GROUP_ZOMBIE", "density": 0.0001 } }
+  },
+
+
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "shelter_computer",
+    "object": {
+      "mapgensize": [ 1, 1 ],
+      "place_computers": [
+        { "x": 0, "y": 0,
+          "name": "Evac shelter computer",
+          "eocs": [ "EOC_REFUGEE_CENTER_COMPUTER" ],
+          "chat_topics": [ "COMP_REFUGEE_CENTER_MAIN" ]
+        }
+      ]
+    }
+  },
+
+  {
+    "id": "EOC_REFUGEE_CENTER_COMPUTER",
+    "type": "effect_on_condition",
+    "effect": [ "open_dialogue" ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "COMP_REFUGEE_CENTER_MAIN",
+    "dynamic_line": "The computer awaits input…",
+    "responses": [
+      { "text": "Emergency Message.", "topic": "COMP_EMERGENCY_MESSAGE" },
+      {
+        "condition": { "u_has_mission": "MISSION_OLD_GUARD_NEC_COMMO_2" },
+        "text": "Disable External Power",
+        "topic": "COMP_DISABLE_EXTERNAL_POWER"
+      },
+      { "text": "Contact Us", "topic": "COMP_FIND_REFUGEE_CENTER" },
+      { "text": "Log off.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "COMP_EMERGENCY_MESSAGE",
+    "dynamic_line": "GREETINGS CITIZEN.  A BIOLOGICAL ATTACK HAS TAKEN PLACE AND A STATE OF EMERGENCY HAS BEEN DECLARED.  EMERGENCY PERSONNEL WILL BE AIDING YOU SHORTLY.  TO ENSURE YOUR SAFETY PLEASE FOLLOW THE STEPS BELOW.\n 1. DO NOT PANIC.\n 2. REMAIN INSIDE THE BUILDING.\n 3. SEEK SHELTER IN THE BASEMENT.\n 4. USE PROVIDED GAS MASKS.\n 5. AWAIT FURTHER INSTRUCTIONS.",
+    "responses": [ { "text": "Press any key.", "topic": "COMP_REFUGEE_CENTER_MAIN" } ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "COMP_DISABLE_EXTERNAL_POWER",
+    "dynamic_line": "--ACCESS GRANTED--\nMission Complete!",
+    "responses": [
+      {
+        "text": "Press any key.",
+        "topic": "COMP_REFUGEE_CENTER_MAIN",
+        "effect": { "finish_mission": "MISSION_OLD_GUARD_NEC_COMMO_2", "step": 1 }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "COMP_FIND_REFUGEE_CENTER",
+    "dynamic_line": "REFUGEE CENTER FOUND!  IF YOU HAVE ANY FEEDBACK CONCERNING YOUR VISIT PLEASE CONTACT\n THE DEPARTMENT OF EMERGENCY MANAGEMENT PUBLIC AFFAIRS OFFICE.\n THE LOCAL OFFICE CAN BE REACHED BETWEEN THE HOURS OF 9AM AND\n 4PM AT 555-0164.\n\nIF YOU WOULD LIKE TO SPEAK WITH SOMEONE IN PERSON OR WOULD LIKE\nTO WRITE US A LETTER PLEASE SEND IT TO…",
+    "responses": [
+      {
+        "condition": { "math": [ "find_refugee_center != 1" ] },
+        "text": "Make a note of the location.",
+        "topic": "COMP_REFUGEE_CENTER_MAIN",
+        "effect": [ { "assign_mission": "MISSION_REACH_REFUGEE_CENTER" }, { "math": [ "find_refugee_center = 1" ] } ]
+      },
+      {
+        "condition": { "math": [ "find_refugee_center == 1" ] },
+        "text": "Press any key.",
+        "topic": "COMP_REFUGEE_CENTER_MAIN"
+      }
+    ]
+  }
+
+]

@@ -1,0 +1,13 @@
+[
+
+  {
+    "type": "MOD_INFO",
+    "id": "EVAQ_PC_REVIVE",
+    "name": "変更：避難シェルターの案内PC復活",
+    "authors": [ "FISK" ],
+    "description": "看板に変更された避難シェルターの案内をPCに差し戻します。",
+    "category": "misc",
+    "dependencies": [ "dda" ]
+  }
+
+]
