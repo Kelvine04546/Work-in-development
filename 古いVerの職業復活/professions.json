@@ -1,0 +1,772 @@
+[
+
+  {
+    "type": "profession",
+    "id": "bionic_prepper",
+    "name": "Bionic Prepper",
+    "description": "You knew the end was coming.  You augmented yourself with some basic bionics and got additional survival training.  Now the end has come, and it is time to see if your efforts have paid off.（終わりが近づいていることは分かっていた。あなたは基本的なバイオニック技術を体に組み込み、さらなるサバイバル訓練も受けてきた。そして今、その終わりが訪れ、これまでの努力が実を結ぶかどうかが試される時が来た。）",
+    "points": 6,
+    "CBMs": [
+      "bio_metabolics",
+      "bio_power_storage_mkII",
+      "bio_tools",
+      "bio_flashlight",
+      "bio_lighter",
+      "bio_evap",
+      "bio_climate",
+      "bio_taste_blocker"
+    ],
+    "skills": [
+      { "level": 4, "name": "survival" },
+      { "level": 3, "name": "fabrication" },
+      { "level": 3, "name": "cooking" },
+      { "level": 2, "name": "firstaid" },
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "rifle" },
+      { "level": 2, "name": "melee" },
+      { "level": 2, "name": "cutting" },
+      { "level": 1, "name": "bashing" }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "hat_boonie",
+          "tshirt",
+          "gloves_fingerless",
+          "pants_cargo",
+          "socks",
+          "boots",
+          "trenchcoat",
+          "knit_scarf",
+          "backpack",
+          "canteen",
+          "smart_phone",
+          "wristwatch",
+          "binoculars"
+        ],
+        "entries": [
+          { "item": "crossbow", "ammo-item": "bolt_steel", "charges": 1, "contents-item": "shoulder_strap" },
+          { "item": "quiver" },
+          { "item": "machete", "container-item": "scabbard" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    }
+  },
+ 
+  {
+    "type": "profession",
+    "id": "bionic_thief",
+    "name": "Bionic Thief",
+    "description": "You have done many high profile heists, but your gains mean nothing in this world.  All you have left are the tools of your trade and your impeccable style.（君は数々の大物狙いの強盗を成し遂げてきたが、この世においてその戦利品など何の価値もない。君に残されているのは仕事道具とその非の打ち所のないスタイルだけだ。）",
+    "points": 4,
+    "CBMs": [ "bio_batteries", "bio_lockpick", "bio_fingerhack", "bio_power_storage_mkII" ],
+    "skills": [ { "level": 1, "name": "gun" }, { "level": 1, "name": "smg" } ],
+    "items": {
+      "both": {
+        "items": [ "waistcoat", "pants", "dress_shirt", "socks", "dress_shoes", "knit_scarf", "gold_watch", "smart_phone" ],
+        "entries": [
+          { "item": "briefcase_smg", "ammo-item": "9mm", "charges": 30 },
+          { "item": "mp5mag", "ammo-item": "9mm", "charges": 30 }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "boxer_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_patient",
+    "name": "Bionic Patient",
+    "description": "When the diagnosis came back positive you signed up for a series of experimental bionic surgeries that saved your life.  Now you're healthier than you ever were before, thanks to a suite of bionic systems powered by your own metabolic functions.  Make the most of your second chance at life.（診断結果が陽性となった際、あなたは一連の実験的なバイオニック手術を受けることを決意し、それが命を救いました。今では自身の代謝機能によって駆動される一連のバイオニックシステムのおかげでかつてないほど健康な体を手に入れています。この「第二の人生」を最大限に活かしてください。）",
+    "points": 5,
+    "CBMs": [ "bio_leukocyte", "bio_blood_anal", "bio_blood_filter", "bio_nanobots", "bio_metabolics", "bio_power_storage_mkII" ],
+    "items": {
+      "both": { "items": [ "jeans", "tshirt", "socks", "sneakers", "wristwatch" ], "entries": [ { "group": "charged_cell_phone" } ] },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_worker",
+    "name": "Industrial Cyborg",
+    "description": "For better or for worse, bionic augmentation has turned you into a walking power tool.  Upgraded with a standard industrial-grade manual labor surgery and training package, you are augmented with bionic muscles and an integrated toolset, both powered by standard batteries.（良くも悪くも、バイオニック・オーグメンテーションによってあなたは歩く電動工具と化してしまった。標準的な産業用肉体労働向けの手術およびトレーニング・パッケージによるアップグレードを経て、あなたはバイオニック・マッスルと統合ツールセットを装備することになった。これらはどちらも標準的なバッテリーで駆動する。）",
+    "points": 6,
+    "skills": [ { "level": 4, "name": "fabrication" }, { "level": 2, "name": "mechanics" } ],
+    "CBMs": [
+      "bio_tools",
+      "bio_sunglasses",
+      "bio_flashlight",
+      "bio_hydraulics",
+      "bio_cable",
+      "bio_power_storage_mkII",
+      "bio_power_storage_mkII"
+    ],
+    "items": {
+      "both": [
+        "socks",
+        "tshirt",
+        "jeans",
+        "leather_belt",
+        "boots_steel",
+        "gloves_work",
+        "glasses_safety",
+        "hat_hard",
+        "smart_phone",
+        "wristwatch"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "sports_bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_athlete",
+    "name": "Bionic Athlete",
+    "description": "It's a shame the apocalypse happened; you'll never get a shot at the Cyberolympics.  Now the only thing between you and death by zombie is your freakish cyborg strength.（黙示録が起きてしまったのは残念だ。もうサイバーオリンピックに出場するチャンスは二度とない。今やゾンビに殺される運命から君を守れるのは、その異様なサイボーグの力だけだ。）",
+    "points": 5,
+    "CBMs": [ "bio_str_enhancer", "bio_adrenaline", "bio_hydraulics", "bio_metabolics", "bio_power_storage_mkII" ],
+    "items": {
+      "both": [
+        "socks_ankle",
+        "under_armor_shorts",
+        "under_armor",
+        "tshirt",
+        "shorts",
+        "lowtops",
+        "fanny",
+        "protein_drink",
+        "smart_phone",
+        "wristwatch"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "sports_bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_runner",
+    "name": "Bionic Runner",
+    "description": "You were that kind of sportsman who couldn't get off the track.  You love running, and you enhanced your body to do it even better.  Now there is plenty to run from, but this is your kind of game.（君はトラックから離れられないタイプのスポーツマンだった。走ることを愛し、それをさらに極めるために体を鍛え上げた。今は逃げ出したいことが山ほどあるが、これこそが君の得意分野だ。）",
+    "points": 4,
+    "CBMs": [ "bio_adrenaline", "bio_torsionratchet", "bio_power_storage_mkII", "bio_jointservo" ],
+    "items": {
+      "both": [
+        "socks_ankle",
+        "under_armor_shorts",
+        "under_armor",
+        "tshirt",
+        "shorts",
+        "lowtops",
+        "fanny",
+        "sports_drink",
+        "smart_phone",
+        "wristwatch"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "sports_bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_cop",
+    "name": "Bionic Police Officer",
+    "description": "Mortally injured in the line of duty, you were resurrected by the surgeons from the department's revolutionary Cybercop program.  Now, in these lawless times, you are truly the future of law enforcement.（任務中に致命傷を負ったあなたは、同部署の画期的な「サイバーコップ」プログラムにより、外科医たちによって蘇生させられた。今、無法がはびこるこの時代において、あなたはまさに法執行機関の未来そのものである。）",
+    "points": 5,
+    "CBMs": [
+      "bio_armor_eyes",
+      "bio_armor_head",
+      "bio_armor_torso",
+      "bio_armor_legs",
+      "bio_armor_arms",
+      "bio_targeting",
+      "bio_infrared",
+      "bio_metabolics",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [ { "level": 1, "name": "gun" }, { "level": 1, "name": "pistol" } ],
+    "items": {
+      "both": {
+        "items": [
+          "tac_fullhelmet",
+          "police_belt",
+          "pants_cargo",
+          "under_armor",
+          "socks",
+          "boots",
+          "smart_phone",
+          "wristwatch"
+        ],
+        "entries": [
+          { "group": "charged_two_way_radio" },
+          { "item": "glock_18c", "ammo-item": "9mmP", "container-item": "holster" },
+          { "item": "tacvest", "contents-group": "army_mags_glock17" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_firefighter",
+    "name": "Bionic Firefighter",
+    "description": "As a second-generation augmented firefighter, you have been cybernetically enhanced to operate in the most dire of emergency situations.  The end of the world definitely counts as a dire situation.（第二世代の「強化消防士」であるあなたは、最も過酷な緊急事態にも対応できるよう、サイバネティックな強化を受けています。世界の終末は間違いなく「過酷な状況」に当てはまります。）",
+    "points": 5,
+    "CBMs": [
+      "bio_climate",
+      "bio_heatsink",
+      "bio_purifier",
+      "bio_infrared",
+      "bio_faraday",
+      "bio_batteries",
+      "bio_power_storage_mkII",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [ { "level": 2, "name": "melee" }, { "level": 1, "name": "firstaid" }, { "level": 1, "name": "swimming" } ],
+    "items": {
+      "both": [
+        "bunker_pants",
+        "fireman_belt",
+        "bunker_coat",
+        "nomex_socks",
+        "boots_bunker",
+        "fire_gauntlets",
+        "glasses_safety",
+        "wristwatch"
+      ],
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_mentat",
+    "name": "Bionic Boffin",
+    "description": "Prior to the apocalypse you were employed by a major international corporation as a representative and technical advisor, utilizing the incredible power of your cybernetically augmented mind.（黙示録が起こる前、あなたは大手多国籍企業に代表兼技術顧問として雇われており、サイバネティクスによって強化された驚異的な頭脳を駆使していた。）",
+    "points": 4,
+    "CBMs": [ "bio_int_enhancer", "bio_face_mask", "bio_watch", "bio_memory", "bio_batteries", "bio_power_storage_mkII" ],
+    "skills": [  { "level": 2, "name": "speech" } ],
+    "no_bonus": "teleumbrella",
+    "items": {
+      "both": [ "socks", "suit", "dress_shoes", "gold_watch", "knit_scarf", "briefcase", "smart_phone", "file", "teleumbrella" ],
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bio_soldier",
+    "name": "Bionic Soldier",
+    "description": "You are the result of one of the military's latest and final research programs, a prototype cyborg soldier.  You're still alive thanks to your augmentations, even after all your comrades fell to the undead.（あなたは軍が実施した最新かつ最後の研究プログラムの一つから生まれた、サイボーグ兵士のプロトタイプだ。仲間たちが皆アンデッドに倒された後もあなたは身体への強化のおかげで生き延びている。）",
+    "points": 6,
+    "CBMs": [
+      "bio_targeting",
+      "bio_purifier",
+      "bio_carbon",
+      "bio_geiger",
+      "bio_adrenaline",
+      "bio_night_vision",
+      "bio_metabolics",
+      "bio_power_storage_mkII",
+      "bio_taste_blocker"
+    ],
+    "skills": [
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "rifle" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "winter_pants_army",
+          "winter_jacket_army",
+          "winter_gloves_army",
+          "mask_ski",
+          "tac_helmet",
+          "socks",
+          "boots_combat",
+          "wristwatch"
+        ],
+        "entries": [
+          { "group": "charged_two_way_radio" },
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+          { "item": "sheath", "contents-item": "knife_combat" },
+          { "item": "m18", "ammo-item": "9mm", "container-item": "holster", "charges": 17 },
+          { "item": "p320mag_17rd_9x19mm", "ammo-item": "9mm", "charges": 17, "count": 2 },
+          {
+            "group": "m4_cqbr",
+            "ammo-item": "556",
+            "charges": 30,
+            "contents-item": [ "shoulder_strap", "holo_sight" ]
+          }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bio_sniper",
+    "name": "Bionic Sniper",
+    "description": "Your bionics, equipment, and extensive field training enable you to drop targets from implausible distances, even after weeks of total isolation in enemy territory.（あなたのバイオニック技術、装備、そして徹底した実地訓練のおかげで、敵地で数週間にわたる完全な孤立状態にあっても、信じがたいほどの遠距離から標的を撃ち落とすことができる。）",
+    "points": 8,
+    "CBMs": [
+      "bio_eye_enhancer",
+      "bio_targeting",
+      "bio_climate",
+      "bio_evap",
+      "bio_eye_optic",
+      "bio_power_storage_mkII",
+      "bio_torsionratchet",
+      "bio_lighter",
+      "bio_night_vision"
+    ],
+    "skills": [
+      { "level": 5, "name": "gun" },
+      { "level": 4, "name": "rifle" },
+      { "level": 2, "name": "pistol" },
+      { "level": 2, "name": "survival" },
+      { "level": 1, "name": "cooking" },
+      { "level": 1, "name": "fabrication" }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "winter_pants_army",
+          "winter_jacket_army",
+          "winter_gloves_army",
+          "gloves_tactical",
+          "rucksack",
+          "cloak",
+          "mask_ski",
+          "socks",
+          "boots_combat",
+          "canteen",
+          "wristwatch",
+          "tent_kit",
+          "rollmat",
+          "e_tool",
+"mil_mess_kit",
+          "knife_hunting"
+        ],
+        "entries": [
+          { "group": "charged_two_way_radio" },
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+          { "item": "hat_boonie", "custom-flags": [ "no_auto_equip" ] },
+          {
+            "item": "m2010",
+            "ammo-item": "300_winmag",
+            "charges": 5,
+            "contents-item": [ "shoulder_strap", "rifle_scope", "bipod" ]
+          },
+          { "item": "usp_45", "ammo-item": "45_acp", "charges": 12, "container-item": "holster" },
+          { "item": "usp45mag", "ammo-item": "45_acp", "charges": 12 },
+          { "item": "usp45mag", "ammo-item": "45_acp", "charges": 12 },
+          { "item": "tacvest", "contents-group": [ "army_mags_m2010" ] }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_spy",
+    "name": "Bionic Agent",
+    "description": "Your body has several bionics worth millions of dollars, paid for by public taxes.  The government has turned you into an infiltration and recon specialist: you have night vision, an alarm, lock picking capabilities and a hacking module.（あなたの体には公的資金で賄われた数百万ドル相当のバイオニック装置がいくつか搭載されている。政府はあなたを潜入・偵察のスペシャリストへと変えた。あなたは暗視機能、警報装置、錠前破りの能力、そしてハッキングモジュールを備えている。）",
+    "points": 4,
+    "CBMs": [
+      "bio_fingerhack",
+      "bio_lockpick",
+      "bio_face_mask",
+      "bio_alarm",
+      "bio_night_vision",
+      "bio_batteries",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [ { "level": 2, "name": "speech" } ],
+    "items": {
+      "both": [ "dress_shoes", "socks", "knit_scarf", "suit", "wristwatch", "smart_phone" ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_hitman",
+    "name": "Bionic Assassin",
+    "description": "The product of millions of dollars of clandestine research, you are a bionic sleeper agent capable of silently engaging your target while maintaining an innocuous appearance.（数百万ドルもの資金が投じられた極秘の研究の成果であるあなたは、一見無害な外見を保ちつつ、静かに標的を攻撃できるバイオニックな潜伏工作員だ。）",
+    "points": 8,
+    "CBMs": [
+      "bio_cqb",
+      "bio_blade",
+      "bio_shock",
+      "bio_carbon",
+      "bio_adrenaline",
+      "bio_night_vision",
+      "bio_face_mask",
+      "bio_metabolics",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [ { "level": 3, "name": "dodge" } ],
+    "items": {
+      "both": [ "dress_shoes", "dress_shirt", "knit_scarf", "wristwatch", "blazer", "wristwatch", "smart_phone" ],
+      "male": [ "briefs", "socks", "pants" ],
+      "female": [ "bra", "panties", "stockings", "skirt" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bio_gangster",
+    "name": "Bionic Gangster",
+    "description": "You were the boss' favorite, their protege; they always counted on you to get the toughest jobs done.  Seeing your potential, they invested in \"basic\" augments and the best gear on the market to better aid you in your job.  After enjoying some period of freedom to do as you wanted, now you find yourself needing those skills to survive.（あなたは上司のお気に入りであり、その寵児だった。上司は最も困難な仕事を成し遂げる時いつもあなたを頼りにしていた。あなたの可能性を見抜いた上司は仕事をより円滑に進められるよう、「基本」となるオーグメントや市場で最高の装備に投資してくれた。しばらくは自分の好きなように振る舞える自由を謳歌していたが、今や生き残るために、そのスキルが必要不可欠となっている。） ",
+    "points": 8,
+    "CBMs": [
+      "bio_targeting",
+      "bio_shotgun",
+      "bio_carbon",
+      "bio_adrenaline",
+      "bio_night_vision",
+      "bio_face_mask",
+      "bio_metabolics",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "unarmed" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "gun" },
+      { "level": 1, "name": "pistol" },
+      { "level": 1, "name": "shotgun" },
+      { "level": 1, "name": "driving" }
+    ],
+    "items": {
+      "both": {
+        "items": [ "suit", "bowhat", "socks", "dress_shoes", "knit_scarf", "cig", "switchblade", "mag_porn", "sunglasses", "shot_00" ],
+        "entries": [
+          { "item": "glock_19", "ammo-item": "9mm", "container-item": "holster", "charges": 15 },
+          { "item": "glockmag", "ammo-item": "9mm", "charges": 15 },
+          { "item": "ref_lighter", "charges": 100 }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_customer",
+    "name": "Commercial Cyborg",
+    "description": "You always had to have the latest and best gadgets and gizmos, so is it any wonder that you upgraded your flesh along with your smart phone?  Only time will tell if your passion for electronics and your status as a marvel of bionic technology will be enough to ensure your survival after the apocalypse.（あなたはいつも最新で最高のガジェットや小物を手に入れずにはいられなかったのだから、スマートフォンと一緒に自分の肉体までアップグレードしたのも不思議ではないだろう。電子機器への情熱とバイオニック技術の驚異としての地位が、黙示録後の世界で生き残るのに十分かどうかは時が経てば分かることだ。）",
+    "points": 6,
+    "CBMs": [ "bio_flashlight", "bio_tools", "bio_ups", "bio_watch", "bio_batteries", "bio_power_storage_mkII" ],
+    "skills": [ { "level": 4, "name": "electronics" }, { "level": 2, "name": "fabrication" } ],
+    "items": {
+      "both": [ "tshirt", "sneakers", "jacket_light", "wristwatch", "smart_phone" ],
+      "male": [ "briefs", "socks", "pants" ],
+      "female": [ "bra", "panties", "stockings", "skirt" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "cyberjunkie",
+    "name": "Cyberjunkie",
+    "description": "Long ago your lifelong infatuation with bionic enhancement lead you into a shady world of back-alley bionic clinics and self-installed secondhand CBMs.  The world has moved on but your posthuman hunger still cries out to be fed; where will you get your bionic fix now?（かつてバイオニック強化への執着が、裏通りの怪しげなバイオニッククリニックや自分で取り付ける中古のCBMといった闇の世界へとあなたを導いた。世の中は変わったがあなたのポストヒューマンとしての渇望は今なお満たされることを求めている。さて、今、どこでそのバイオニックへの渇望を満たせばよいのだろうか？）",
+    "points": 0,
+    "CBMs": [
+      "bio_itchy",
+      "bio_shakes",
+      "bio_leaky",
+      "bio_sleepy",
+      "bio_trip",
+      "bio_spasm",
+      "bio_metabolics",
+      "bio_power_storage_mkII",
+      "bio_painkiller",
+      "bio_climate"
+    ],
+    "skills": [ { "level": 1, "name": "electronics" }, { "level": 1, "name": "firstaid" }, { "level": 1, "name": "computer" } ],
+    "items": {
+      "both": {
+        "items": [ "tank_top", "shorts", "socks", "lowtops", "aspirin", "anesthetic_kit", "pockknife", "backpack", "wristwatch" ],
+        "entries": [ { "group": "charged_cell_phone" } ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "camisole", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "cykotic",
+    "name": "Bionic Monster",
+    "description": "Completely overtaken by bionic-induced psychosis, you are a deformed posthuman monster who had no place in society.  But now, where once you were forced to hide in the shadows, you find in this new desolation a world where even a creature such as yourself might find its niche.（バイオニック技術による精神障害に支配されたあなたは社会に居場所のない、奇形化したポストヒューマンの怪物だ。しかし今、かつては影に身を潜めるしかなかったあなたがこの新たな荒廃した世界で、自分のような存在でさえ居場所を見つけられるかもしれないと気づく。）",
+    "points": 2,
+    "CBMs": [
+      "bio_thumbs",
+      "bio_spasm",
+      "bio_shakes",
+      "bio_leaky",
+      "bio_sleepy",
+      "bio_deformity",
+      "bio_voice",
+      "bio_ankles",
+      "bio_trip",
+      "bio_stiff",
+      "bio_metabolics",
+      "bio_power_storage_mkII",
+      "bio_adrenaline",
+      "bio_claws",
+      "bio_digestion",
+      "bio_water_extractor",
+      "bio_taste_blocker"
+    ],
+    "skills": [
+      { "level": 3, "name": "melee" },
+      { "level": 3, "name": "unarmed" },
+      { "level": 3, "name": "dodge" },
+      { "level": 2, "name": "survival" }
+    ],
+    "items": {
+      "both": [
+        "tank_top",
+        "shorts_cargo",
+        "footrags",
+        "gloves_wraps",
+        "hat_cotton",
+        "bandana",
+        "hat_noise_cancelling",
+        "wristwatch"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "drone_op",
+    "name": "Drone Operator",
+    "description": "You had a job programming machines such as automatic street cleaners, newsbots and pizza delivery drones.  Now all the drones carry guns instead of pizza.（あなたは自動道路清掃車やニュースボット、ピザ配達ドローンなどの機械のプログラミングを担当していました。ところが今ではすべてのドローンがピザの代わりに銃を積んでいるのです。）",
+    "points": 1,
+    "CBMs": [ "bio_batteries", "bio_power_storage", "bio_remote" ],
+    "skills": [ { "level": 2, "name": "computer" } ],
+    "items": {
+      "both": { "items": [ "jumpsuit", "socks", "boots", "wristwatch" ], "entries": [ { "group": "charged_cell_phone" } ] },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_student",
+    "name": "Bionic Student",
+    "description": "Your parents were so obsessed with making sure you aced every test that they had you outfitted with bionics to make you smarter and never forget anything.  And now, you are facing the most dire test yet, and once again you had better succeed, or else.（両親はあなたがすべての試験で満点を取ることに執着しすぎて、あなたを賢くし、何も忘れないようにするためにバイオニック装置を装着させた。そして今、あなたはこれまでで最も過酷な試練に直面している。今回も成功しなければ大変なことになるだろう。）",
+    "points": 3,
+    "CBMs": [ "bio_batteries", "bio_power_storage", "bio_int_enhancer", "bio_memory" ],
+    "items": {
+      "both": [
+        "dress_shirt",
+        "jacket_light",
+        "pants",
+        "socks",
+        "dress_shoes",
+        "tie_clipon",
+        "tieclip",
+        "sunglasses",
+        "knit_scarf",
+        "wristwatch",
+        "mbag",
+        "water_mineral",
+        "smart_phone"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bionic_game_master",
+    "name": "Bionic Game Master",
+    "description": "You came into a large fortune, through luck or will, and hosted games for people that most of the world knew on a first-name basis.  You could afford to spoil your players, and so you did.  You invested in bionics to make you smarter, and memorized the entire handbook.  Let's hope that knowledge helps you now.（運か、あるいは自らの意志か、あなたは莫大な財産を手にして世界中の誰もが名前で知るような人々を招いてゲームを開催した。選手たちを贅沢に扱えるだけの余裕があったからあなたはそうしてきた。頭脳を強化するためにバイオニクスに投資し、そのハンドブックを丸暗記した。その知識が今、あなたの役に立つことを願おう。）",
+    "points": 4,
+    "traits": [ "PROF_DICEMASTER" ],
+    "CBMs": [ "bio_batteries", "bio_power_storage", "bio_memory", "bio_int_enhancer" ],
+    "skills": [
+      { "level": 3, "name": "speech" },
+      { "level": 2, "name": "survival" },
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "archery" },
+      { "level": 1, "name": "bashing" },
+      { "level": 1, "name": "cutting" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "throw" }
+    ],
+    "items": {
+      "both": [ "jeans", "polo_shirt", "socks", "dress_shoes", "mbag", "caffeine", "smart_phone", "wristwatch" ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "bio_medic",
+    "name": "Bionic Surgeon",
+    "description": "As one of the top surgeons in the country, you were chosen for an augmentation program to expand the medical field.  With your expertise and augmentations, you can perform precise surgery with little assistance.（国内屈指の外科医であるあなたは、医療分野の発展を目的とした強化プログラムの参加者として選ばれました。あなたの専門知識と強化された能力によりほとんど補助を必要とせずに精密な手術を行うことができます。）",
+    "points": 6,
+    "CBMs": [ "bio_surgical_razor", "bio_flashlight", "bio_batteries", "bio_power_storage_mkII" ],
+    "skills": [ { "level": 8, "name": "firstaid" } ],
+    "traits": [ "PROF_MED" ],
+    "items": {
+      "both": {
+        "items": [
+          "gloves_medical",
+          "socks",
+          "mask_dust",
+          "dress_shirt",
+          "pants",
+          "dress_shoes",
+          "coat_lab",
+          "stethoscope",
+          "bfipowder",
+          "antibiotics",
+          "oxycodone",
+          "smart_phone",
+          "wristwatch"
+        ],
+        "entries": [ { "item": "medium_battery_cell", "charges": 500 } ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+
+  {
+    "type": "profession",
+    "id": "old_afs_atomic_pitchman",
+    "name": { "male": "Atomic Pitchman", "female": "Atomic Pitchwoman" },
+    "description": "You were hired to market Rivtech's products through TV and were on your way to the studio when the bombs hit.  You enter now the end of the world with nothing but the snazzy clothes on your back and a bunch of plutonium-powered toys.（あなたはリブテック社の製品をテレビで宣伝するために雇われ、スタジオへ向かう途中だったところで爆弾が投下された。今、あなたは身にまとったおしゃれな服とプルトニウムを動力源とするおもちゃの数々だけを手に世界の終焉へと足を踏み入れる。）",
+    "points": 3,
+    "skills": [ { "level": 1, "name": "speech" } ],
+    "items": {
+      "both": [
+        "dress_shirt",
+        "pants",
+        "dress_shoes",
+        "socks",
+        "mbag",
+        "old_afs_atomic_smartphone",
+        "atomic_light",
+        "atomic_coffeepot",
+        "atomic_lamp_off",
+        "old_afs_atompot",
+        "energy_drink_atomic"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+
+  {
+    "id": "old_afs_atomic_smartphone",
+    "type": "ITEM",  "subtypes": [ "TOOL" ],
+    "name": { "str": "atomic smartphone" },
+    "description": "Never charge your phone again with the Rivtech atomic smartphone.  Rated for 10 million years of use, this cutting-edge gadget had been on public markets for less than a week when the Cataclysm hit, and their eye-watering price made them a rarity.  It includes an alarm clock, a high-resolution camera, and a bright flashlight.（Rivtech社の「アトミック・スマートフォン」があれば、もうスマホの充電に悩む必要はありません。1,000万年の使用に耐えるというこの最先端ガジェットは、大災害が発生した時点で発売から1週間も経っていませんでしたが、その法外な価格ゆえに極めて希少な存在となっています。目覚まし時計、高解像度カメラ、そして明るい懐中電灯が搭載されています。）",
+    "weight": "300 g",
+    "volume": "50 ml",
+    "price": "200000 cent",
+    "price_postapoc": "2500 cent",
+    "material": [ "plastic", "aluminum" ],
+    "looks_like": "cell_phone",
+    "symbol": ";",
+    "color": "light_green",
+    "qualities": [ [ "HACK", 2 ] ],
+    "use_action": [
+      {
+        "target": "old_afs_atomic_smartphone_flashlight",
+        "msg": "You activate the flashlight app.",
+        "active": true,
+        "type": "transform"
+      },
+      "CAMERA",
+      "E_FILE_DEVICE",
+      "CALORIES_INTAKE_TRACKER",
+      "PORTABLE_GAME",
+      "EBOOKSAVE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "E_FILE_STORAGE",
+        "rigid": true,
+        "max_contains_volume": "1 ml",
+        "max_contains_weight": "1 g",
+        "weight_multiplier": 0.0,
+        "ememory_max": "256 GB"
+      } ],
+    "flags": [ "WATCH", "ALARMCLOCK", "NO_UNLOAD", "NO_RELOAD" ]
+  },
+  {
+    "id": "old_afs_atomic_smartphone_flashlight",
+    "copy-from": "old_afs_atomic_smartphone",
+        "type": "ITEM",  "subtypes": [ "TOOL" ],
+    "name": { "str": "atomic smartphone - Flashlight", "str_pl": "atomic smartphones - Flashlight" },
+    "revert_to": "afs_atomic_smartphone",
+    "use_action": {
+      "target": "old_afs_atomic_smartphone",
+      "msg": "You deactivate the flashlight app.",
+      "menu_text": "Turn off flashlight",
+      "type": "transform"
+    },
+    "flags": [ "WATCH", "LIGHT_25", "CHARGEDIM", "TRADER_AVOID", "ALARMCLOCK", "NO_UNLOAD", "NO_RELOAD" ]
+  },
+
+  {
+    "id": "old_afs_atompot",
+        "type": "ITEM",  "subtypes": [ "ARTIFACT", "TOOL" ],
+    "name": { "str": "atompot" },
+    "copy-from": "pressure_cooker",
+    "description": "Rivtech's premiere self-heating kitchen appliance, complete with lid, hand-crafted with the power of the atom to reach any temperature in thirty seconds.  As bulky as it is, its plutonium power source means that it can be used to cook an absurd amount of meals without ever worrying about running low on power.  Unsurprisingly, sales weren't particularly good because of the prospect of irradiating your food, but internal shielding ensures that only trace amounts find its way into the center.(Rivtech社の最高級自己発熱式キッチン家電。蓋付きで、原子の力を利用して30秒で任意の温度に達するように手作りされています。その大きさはさることながら、プルトニウムを動力源としているため、電力が尽きる心配をすることなく、途方もない量の料理を作ることができます。 当然ながら、食品に放射線を浴びせるという懸念から販売は振るいませんでしたが、内部の遮蔽により、中心部に到達するのはごく微量のみとなっています。)",
+    "price": "200000 cent",
+    "material": [ "steel", "plastic" ],
+    "tool_ammo": [ "battery" ],
+    "looks_like": "pot",
+    "symbol": ")",
+    "color": "light_green",
+    "charges_per_use": 1,
+    "charge_info": { "recharge_type": "periodic", "time": "1 s", "regenerate_ammo": true },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 9999 } } ],
+    "use_action": ["HEAT_FOOD", "HOTPLATE_ATOMIC"],
+    "flags": [ "LEAK_DAM", "RADIOACTIVE", "NO_UNLOAD", "FIRE", "TARDIS", "ALLOWS_REMOTE_USE" ]
+  },
+
+  {
+    "id": "water_boiling_heat",
+    "type": "requirement",
+    "tools": [
+      [
+        [ "old_afs_atompot", 50 ],
+        [ "coffeemaker", 125 ],
+        [ "hotplate_induction", 125 ],
+        [ "hotplate", 200 ],
+        [ "microwave", 250 ],
+        [ "multi_cooker", 200 ],
+        [ "char_smoker", 30 ],
+        [ "charcoal_cooker", 30 ],
+        [ "esbit_stove", 13 ],
+        [ "oil_cooker", 12 ],
+        [ "gasoline_cooker", 12 ],
+        [ "biogas_cooker", 80 ],
+        [ "propane_cooker", 16 ],
+        [ "acetylene_cooker", 8 ],
+        [ "popcan_stove", 20 ],
+        [ "atomic_coffeepot", 115 ],
+        [ "fire", -1 ]
+      ]
+    ]
+  }
+
+]

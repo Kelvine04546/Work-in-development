@@ -1,0 +1,233 @@
+[
+
+  {
+    "type": "mapgen",
+    
+    "om_terrain": [ [ "rd_nefia0_nw", "rd_nefia0_ne" ], [ "rd_nefia0_sw","rd_nefia0_se" ] ],
+    "weight": 100,
+    "object": {
+    "fill_ter": "t_grass",
+    "rows": [
+"################################################",
+"#===  D                                        #",
+"#=>=                                           #",
+"#===                                           #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                           ===#",
+"#                                           ===#",
+"#                                           ===#",
+"################################################" ],
+      "terrain": { 
+         ">": "t_stairs_down",
+         "#": [ "t_grass", "t_grass_dead", "t_dirt" ],
+         "D": "t_utility_light",
+         " ": [ "t_grass", "t_grass_dead", "t_dirt" ],
+         "=": [ "t_grass", "t_grass_dead", "t_dirt" ]
+       },
+      "place_vehicles": [
+        { "vehicle": "ambulance", "x": 12, "y": 15, "chance": 100, "rotation": 0 }
+      ],
+
+  "place_signs": [ { "signage": "調査する際は光源準備！土の壁は崩せます！罠に注意してください！このダンジョンは他よりも深いです！また、主が複数いる可能性があります！", "x": 5, "y": 5 } ] }
+  },
+
+  {
+    "type": "mapgen",
+    
+    "om_terrain": [ ["rd_nefia3_nw","rd_nefia3_ne"], ["rd_nefia3_sw","rd_nefia3_se"] ],
+    "weight": 250,
+    "object": {
+    "fill_ter": "t_vitrified_floor",
+    "rows": [
+"################################################",
+"#===                                           #",
+"#=<=                                           #",
+"#===                                           #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                              #",
+"#                                           ===#",
+"#                                           ===#",
+"#                                           ===#",
+"################################################" ],
+      "terrain": { 
+         "<": "t_stairs_up",
+         ">": "t_stairs_down",
+         "#": "t_wall_metal_nfia",
+         " ": [ "t_wall_wood_nefia", "t_vitrified_floor", "t_vitrified_floor", "t_vitrified_tile" ],
+         "=": "t_dirt"
+       },
+      "traps": { " ": [ [ "tr_null", 94 ], ["tr_sinkhole", 1], ["tr_beartrap", 1], ["tr_crossbow", 1], [ "tr_glass", 1], ["tr_nailboard", 1] ] },
+  "items": { " ": { "item": "rdd_nefia_set", "chance": 2 } },
+"place_monster": [
+        { "group": "GROUP_ZOMBIE_RDD_BOSS", "x": [ 30, 44 ], "y": [ 30, 44 ], "repeat": [ 2, 4 ] } ],
+      "monster": {
+        " ": { "group": "GROUP_ZOMBIE_RDD", "chance": 1 }
+      },
+  "place_signs": [ { "signage": "注意！ボスが複数いる可能性あり！自信が無ければ引き返せ！床の暗さに騙されるな！", "x": 5, "y": 5 } ]
+    }
+  },
+
+
+   {
+        "type" : "overmap_terrain",
+        "id" : [ "rd_nefia0_nw", "rd_nefia0_ne", "rd_nefia0_sw", "rd_nefia0_se" ],
+        "name" : "[RDD] 自動生成ダンジョン地表部：深度2倍",
+        "looks_like": "cave",
+        "sym": "0",
+        "color": "yellow",
+        "see_cost": "none",
+        "flags": [ "RISK_HIGH" ]
+    },
+
+   {
+        "type" : "overmap_terrain",
+        "id" : [ "rd_nefia3_nw", "rd_nefia3_ne", "rd_nefia3_sw", "rd_nefia3_se" ],
+        "name" : "[RDD] 自動生成ダンジョン地表部：深度2倍最深部",
+        "looks_like": "cave",
+        "sym": "0",
+        "color": "yellow",
+        "see_cost": "none",
+        "flags": [ "RISK_HIGH" ]
+    },
+
+
+{
+        "type" : "overmap_special",
+        "id" : "rdd_nefia_set",
+        "overmaps" : [
+
+            { "point":[0,0,0], "overmap": "rd_nefia0_nw_north"},
+            { "point":[1,0,0], "overmap": "rd_nefia0_ne_north"},
+            { "point":[0,1,0], "overmap": "rd_nefia0_sw_north"},
+            { "point":[1,1,0], "overmap": "rd_nefia0_se_north"},
+
+            { "point":[0,0,-1], "overmap": "r_nefia_nw_north"},
+            { "point":[1,0,-1], "overmap": "r_nefia_ne_north"},
+            { "point":[0,1,-1], "overmap": "r_nefia_sw_north"},
+            { "point":[1,1,-1], "overmap": "r_nefia_se_north"},
+
+            { "point":[0,0,-2], "overmap": "r_nefia2_nw_north"},
+            { "point":[1,0,-2], "overmap": "r_nefia2_ne_north"},
+            { "point":[0,1,-2], "overmap": "r_nefia2_sw_north"},
+            { "point":[1,1,-2], "overmap": "r_nefia2_se_north"},
+
+            { "point":[0,0,-3], "overmap": "r_nefia_nw_north"},
+            { "point":[1,0,-3], "overmap": "r_nefia_ne_north"},
+            { "point":[0,1,-3], "overmap": "r_nefia_sw_north"},
+            { "point":[1,1,-3], "overmap": "r_nefia_se_north"},
+
+            { "point":[0,0,-4], "overmap": "r_nefia2_nw_north"},
+            { "point":[1,0,-4], "overmap": "r_nefia2_ne_north"},
+            { "point":[0,1,-4], "overmap": "r_nefia2_sw_north"},
+            { "point":[1,1,-4], "overmap": "r_nefia2_se_north"},
+
+            { "point":[0,0,-5], "overmap": "r_nefia_nw_north"},
+            { "point":[1,0,-5], "overmap": "r_nefia_ne_north"},
+            { "point":[0,1,-5], "overmap": "r_nefia_sw_north"},
+            { "point":[1,1,-5], "overmap": "r_nefia_se_north"},
+
+            { "point":[0,0,-6], "overmap": "r_nefia2_nw_north"},
+            { "point":[1,0,-6], "overmap": "r_nefia2_ne_north"},
+            { "point":[0,1,-6], "overmap": "r_nefia2_sw_north"},
+            { "point":[1,1,-6], "overmap": "r_nefia2_se_north"},
+
+            { "point":[0,0,-7], "overmap": "r_nefia_nw_north"},
+            { "point":[1,0,-7], "overmap": "r_nefia_ne_north"},
+            { "point":[0,1,-7], "overmap": "r_nefia_sw_north"},
+            { "point":[1,1,-7], "overmap": "r_nefia_se_north"},
+
+            { "point":[0,0,-8], "overmap": "r_nefia2_nw_north"},
+            { "point":[1,0,-8], "overmap": "r_nefia2_ne_north"},
+            { "point":[0,1,-8], "overmap": "r_nefia2_sw_north"},
+            { "point":[1,1,-8], "overmap": "r_nefia2_se_north"},
+
+
+            { "point":[0,0,-9], "overmap": "rd_nefia3_nw_north"},
+            { "point":[1,0,-9], "overmap": "rd_nefia3_ne_north"},
+            { "point":[0,1,-9], "overmap": "rd_nefia3_sw_north"},
+            { "point":[1,1,-9], "overmap": "rd_nefia3_se_north"}
+        ],
+     "locations": [ "field" ],
+     "city_distance" : [ 2, 4],
+     "occurrences" : [ 1, 1],
+     "flags": [ "CLASSIC", "MAN_MADE" ]
+    }
+
+]

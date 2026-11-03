@@ -1,0 +1,10 @@
+[
+  { 
+    "type": "MOD_INFO",
+    "id": "oled_ver_profession_rest",
+    "name": "復旧 - 削除された古い職業",    
+    "authors": [ "Fisk" ],
+    "description": "現在削除された古い職業（主にCBM関連と原子力製品販売員）が再登場します",
+    "category": "misc"
+  }
+]

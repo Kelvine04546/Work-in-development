@@ -1,0 +1,678 @@
+[ 
+ {
+    "type": "option_slider",
+    "id": "add_world_cities",
+    "context": "WORLDGEN",
+    "name": "都市の大きさ：標準は8　生成安定値は4-8内",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "大都市を作る時はサイズを8以上、余白を2から3にするとよいです。",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 1 } ]
+      },
+      { "level": 1, "name": "サイズ2",
+        "description": "都市サイズ2",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 2 } ]
+      },
+      { "level": 2, "name": "サイズ3",
+        "description": "都市サイズ3",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 3 } ]
+      },
+      { "level": 3, "name": "サイズ4",
+        "description": "都市サイズ4",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 4 } ]
+      },
+      { "level": 4, "name": "サイズ5",
+        "description": "都市サイズ5",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 5 } ]
+      },
+      { "level": 5, "name": "サイズ6",
+        "description": "都市サイズ6",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 6 } ]
+      },
+      { "level": 6, "name": "サイズ7",
+        "description": "都市サイズ7",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 7 } ]
+      },
+      { "level": 7, "name": "サイズ8",
+        "description": "都市サイズ8　大きすぎて作成失敗することがあります",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 8 } ]
+      },
+      { "level": 8, "name": "サイズ9",
+        "description": "都市サイズ9　大きすぎて作成失敗することがあります",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 9 } ]
+      },
+      { "level": 9, "name": "サイズ10",
+        "description": "都市サイズ10　大きすぎて作成失敗することがあります",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 10 } ]
+      },
+      { "level": 10, "name": "サイズ11",
+        "description": "都市サイズ11　大きすぎて作成失敗することがあります",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 11 } ]
+      },
+      { "level": 11, "name": "サイズ12(大型だが動作不安定)",
+        "description": "都市サイズ12　大きすぎて作成失敗することがあります",
+        "options": [ { "option": "CITY_SIZE", "type": "int", "val": 12 } ]
+      }
+    ]
+  },
+
+  {
+    "type": "option_slider",
+    "id": "add_world_sapace",
+    "context": "WORLDGEN",
+    "name": "都市間の余白：標準は4　生成安定値は4-8内",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "田舎を作りたい時は都市サイズを3未満、余白を7以上にすると自然が主になります。",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 1 } ]
+      },
+      { "level": 1, "name": "間の距離2",
+        "description": "都市間の距離2　※処理負荷が高く生成がかなり遅くなります！",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 2 } ]
+      },
+      { "level": 2, "name": "間の距離3",
+        "description": "都市間の距離3　※処理負荷が高く生成が遅くなります！",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 3 } ]
+      },
+      { "level": 3, "name": "間の距離4",
+        "description": "都市間の距離4　街の数は結構多いです",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 4 } ]
+      },
+      { "level": 4, "name": "間の距離5",
+        "description": "都市間の距離5　程々の量の街が生成されます。",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 5 } ]
+      },
+      { "level": 5, "name": "間の距離6",
+        "description": "都市間の距離6　街の数は少な目になります。",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 6 } ]
+      },
+      { "level": 6, "name": "間の距離7",
+        "description": "都市間の距離7　街は1～2つぐらいになり、森や農地が増えます。",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 7 } ]
+      },
+      { "level": 7, "name": "間の距離8",
+        "description": "都市間の距離8　街はほぼなく、施設生成に失敗してスタートできない恐れがあります！",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 8 } ]
+      },
+      { "level": 8, "name": "デフォルト",
+        "description": "距離9以降は正常に作動しません。",
+        "options": [ { "option": "CITY_SPACING", "type": "int", "val": 9 } ]
+      }
+    ]
+  },
+
+  {
+    "type": "option_slider",
+    "id": "add_world_monsp",
+    "context": "WORLDGEN",
+    "name": "敵の速度：標準は100％",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "これを選ぶと敵速度は100％で動きます",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 0 } ]
+      },
+      { "level": 1, "name": "敵の速度1%",
+        "description": "敵の速度1%　敵は殆ど止まっており、目の前で食事も不可能ではありません。",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 1 } ]
+      },
+      { "level": 2, "name": "敵の速度5%",
+        "description": "敵の速度5%　敵は殆ど止まっており、一撃離脱どころか四撃離脱も不可能ではありません。",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 5 } ]
+      },
+      { "level": 3, "name": "敵の速度10%",
+        "description": "敵の速度10%",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 10 } ]
+      },
+      { "level": 4, "name": "敵の速度20%",
+        "description": "敵の速度20%",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 20 } ]
+      },
+      { "level": 5, "name": "敵の速度50%",
+        "description": "敵の速度50%　練習にちょうど良い速度です。",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 50 } ]
+      },
+      { "level": 6, "name": "敵の速度75%",
+        "description": "敵の速度75　少し緩く、でも戦闘を楽しみたい場合は75％が良い感じです。",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 75 } ]
+      },
+      { "level": 7, "name": "敵の速度100%(基本)",
+        "description": "敵の速度100%",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 100 } ]
+      },
+      { "level": 8, "name": "敵の速度110%",
+        "description": "敵の速度110%　ちょっとだけ敵が早くなります",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 110 } ]
+      },
+      { "level": 9, "name": "敵の速度130%",
+        "description": "敵の速度130%",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 130 } ]
+      },
+      { "level": 10, "name": "敵の速度150%",
+        "description": "敵の速度150%　普通のゾンビでも追いついてきます。",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 150 } ]
+      },
+      { "level": 11, "name": "敵の速度200%",
+        "description": "敵の速度200%　大抵の敵は自分より早く、先手を取られます！",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 200} ]
+      },
+      { "level": 12, "name": "敵の速度300%(3倍速)",
+        "description": "敵の速度300%　速すぎてまともに戦えません！逃げるのも困難です！",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 300 } ]
+      },
+      { "level": 13, "name": "敵の速度500%(動作不安定)",
+        "description": "敵の速度500%　ほとんど勝負になりません！探知されれば逃げるのも厳しいです！",
+        "options": [ { "option": "MONSTER_SPEED", "type": "int", "val": 500 } ]
+      }
+    ]
+  },
+
+  {
+    "type": "option_slider",
+    "id": "add_world_monhp",
+    "context": "WORLDGEN",
+    "name": "敵のHP：標準は100％",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "これを選ぶと敵HPは100％になります。",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 0.5 } ]
+      },
+      { "level": 1, "name": "敵のHP1%",
+        "description": "敵のHP1%　攻撃はオーバーキルになりやすく、装甲のないゾンビは復活不能に陥りやすいです。",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 1 } ]
+      },
+      { "level": 2, "name": "敵のHP5%",
+        "description": "敵のHP5%　攻撃はオーバーキルになりやすく、装甲のないゾンビは復活不能に陥りやすいです。",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 5 } ]
+      },
+      { "level": 3, "name": "敵のHP10%",
+        "description": "敵のHP10%",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 10 } ]
+      },
+      { "level": 4, "name": "敵のHP20%",
+        "description": "敵のHP20%",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 20 } ]
+      },
+      { "level": 5, "name": "敵のHP50%",
+        "description": "敵のHP50%",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 50 } ]
+      },
+      { "level": 6, "name": "敵のHP75%",
+        "description": "敵のHP75%",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 75 } ]
+      },
+      { "level": 7, "name": "敵のHP100%(基本)",
+        "description": "敵のHP100%",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 100 } ]
+      },
+      { "level": 8, "name": "敵のHP110%",
+        "description": "敵のHP110%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 110 } ]
+      },
+      { "level": 9, "name": "敵のHP130%",
+        "description": "敵のHP130%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 130 } ]
+      },
+      { "level": 10, "name": "敵のHP150%",
+        "description": "敵のHP150%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 150 } ]
+      },
+      { "level": 11, "name": "敵のHP200%",
+        "description": "敵のHP200%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 200} ]
+      },
+      { "level": 12, "name": "敵のHP300%",
+        "description": "敵のHP300%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 300 } ]
+      },
+      { "level": 13, "name": "敵のHP500%(動作不安定)",
+        "description": "敵のHP500%　敵はデフォルトより頑強になります",
+        "options": [ { "option": "MONSTER_RESILIENCE", "type": "int", "val": 500 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_monspawn",
+    "context": "WORLDGEN",
+    "name": "敵の密度・生成率：標準は100％",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "密度・生成率を下げると都市などの設備内に配置される敵数が減ります。",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0 } ]
+      },
+      { "level": 1, "name": "敵の密度・生成率1%",
+        "description": "敵の密度・生成率1%　殆ど敵はおらず平和な世界です。",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.01 } ]
+      },
+      { "level": 2, "name": "敵の密度・生成率5%",
+        "description": "敵の密度・生成率5%　殆ど敵はおらず平和な世界です。",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.05 } ]
+      },
+      { "level": 3, "name": "敵の密度・生成率10%",
+        "description": "敵の密度・生成率10%",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.1 } ]
+      },
+      { "level": 4, "name": "敵の密度・生成率20%",
+        "description": "敵の密度・生成率20%",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.2 } ]
+      },
+      { "level": 5, "name": "敵の密度・生成率50%",
+        "description": "敵の密度・生成率50%",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.50 } ]
+      },
+      { "level": 6, "name": "敵の密度・生成率75%",
+        "description": "敵の密度・生成率75",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 0.75 } ]
+      },
+      { "level": 7, "name": "敵の密度・生成率100%(基本)",
+        "description": "敵の密度・生成率100%",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 1 } ]
+      },
+      { "level": 8, "name": "敵の密度・生成率110%",
+        "description": "敵の密度・生成率110%",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 1.1 } ]
+      },
+      { "level": 9, "name": "敵の密度・生成率130%",
+        "description": "敵の密度・生成率130%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 1.3 } ]
+      },
+      { "level": 10, "name": "敵の密度・生成率150%",
+        "description": "敵の密度・生成率150%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 1.5 } ]
+      },
+      { "level": 11, "name": "敵の密度・生成率200%",
+        "description": "敵の密度・生成率200%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 2.0} ]
+      },
+      { "level": 12, "name": "敵の密度・生成率300%",
+        "description": "敵の密度・生成率300%　生成処理が重くなり、配置失敗の恐れあり",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 3.0 } ]
+      },
+      { "level": 13, "name": "敵の密度・生成率500%(動作不安定)",
+        "description": "敵の密度・生成率500%　生成処理が重くなり、配置失敗の恐れあり",
+        "options": [ { "option": "SPAWN_DENSITY", "type": "float", "val": 5.0 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_itmpawn",
+    "context": "WORLDGEN",
+    "name": "アイテム生成率：標準は100%",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "数値を下げるとその分落ちているアイテムが減ります。",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0 } ]
+      },
+      { "level": 1, "name": "アイテム生成率1%",
+        "description": "アイテム生成率1%　アイテムは殆ど落ちていません！",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.01 } ]
+      },
+      { "level": 2, "name": "アイテム生成率5%",
+        "description": "アイテム生成率5%　アイテムは殆ど落ちていません！",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.05 } ]
+      },
+      { "level": 3, "name": "アイテム生成率10%",
+        "description": "アイテム生成率10%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.1 } ]
+      },
+      { "level": 4, "name": "アイテム生成率20%",
+        "description": "アイテム生成率20%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.2 } ]
+      },
+      { "level": 5, "name": "アイテム生成率50%",
+        "description": "アイテム生成率50%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.50 } ]
+      },
+      { "level": 6, "name": "アイテム生成率75%",
+        "description": "アイテム生成率75",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 0.75 } ]
+      },
+      { "level": 7, "name": "アイテム生成率100%(基本)",
+        "description": "アイテム生成率100%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 1 } ]
+      },
+      { "level": 8, "name": "アイテム生成率110%",
+        "description": "アイテム生成率110%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 1.1 } ]
+      },
+      { "level": 9, "name": "アイテム生成率130%",
+        "description": "アイテム生成率130%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 1.3 } ]
+      },
+      { "level": 10, "name": "アイテム生成率150%",
+        "description": "アイテム生成率150%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 1.5 } ]
+      },
+      { "level": 11, "name": "アイテム生成率200%",
+        "description": "アイテム生成率200%",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 2.0} ]
+      },
+      { "level": 12, "name": "アイテム生成率300%",
+        "description": "アイテム生成率300%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 3.0 } ]
+      },
+      { "level": 13, "name": "アイテム生成率500%",
+        "description": "アイテム生成率500%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 5.0 } ]
+      },
+      { "level": 13, "name": "アイテム生成率1000%(動作不安定)",
+        "description": "アイテム生成率1000%　生成処理が重くなり、動作不安定発生の恐れあり",
+        "options": [ { "option": "ITEM_SPAWNRATE", "type": "float", "val": 10.0 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_npcspawn",
+    "context": "WORLDGEN",
+    "name": "NPC生成周期：標準は1倍",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "周期を遅くするとNPC生成がその分遅れます。しかし、実感は乏しいかもしれません。",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 50} ]
+      },
+      { "level": 1, "name": "NPC生成周期40倍遅い",
+        "description": "NPC生成周期40倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 40} ]
+      },
+      { "level": 2, "name": "NPC生成周期30倍遅い",
+        "description": "NPC生成周期30倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 30 } ]
+      },
+      { "level": 3, "name": "NPC生成周期20倍遅い",
+        "description": "NPC生成周期20倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 20 } ]
+      },
+      { "level": 4, "name": "NPC生成周期10倍遅い",
+        "description": "NPC生成周期10倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 10 } ]
+      },
+      { "level": 5, "name": "NPC生成周期5倍遅い",
+        "description": "NPC生成周期5倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 5 } ]
+      },
+      { "level": 6, "name": "NPC生成周期4倍遅い",
+        "description": "NPC生成周期4倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 4 } ]
+      },
+      { "level": 7, "name": "NPC生成周期3倍遅い",
+        "description": "NPC生成周期3倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 3 } ]
+      },
+      { "level": 8, "name": "NPC生成周期2倍遅い",
+        "description": "NPC生成周期2倍遅い",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 2 } ]
+      },
+      { "level": 9, "name": "NPC生成周期標準",
+        "description": "NPC生成周期標準",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 1 } ]
+      },
+      { "level": 10, "name": "NPC生成周期2倍",
+        "description": "NPC生成周期2倍",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 0.5} ]
+      },
+      { "level": 11, "name": "NPC生成周期4倍",
+        "description": "NPC生成周期4倍",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 0.25 } ]
+      },
+      { "level": 12, "name": "NPC生成周期10倍",
+        "description": "NPC生成周期10倍",
+        "options": [ { "option": "NPC_SPAWNTIME", "type": "float", "val": 0.1 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_mobev",
+    "context": "WORLDGEN",
+    "name": "敵進化日数：標準は120日",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "進化日数は短くすると早く進化し、遅くするとその分敵の進化が遅れます。",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 1} ]
+      },
+      { "level": 1, "name": "敵進化日数4800日",
+        "description": "敵進化日数4800日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 40} ]
+      },
+      { "level": 2, "name": "敵進化日数3600日",
+        "description": "敵進化日数3600日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 30 } ]
+      },
+      { "level": 3, "name": "敵進化日数2400日",
+        "description": "敵進化日数2400日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 20 } ]
+      },
+      { "level": 4, "name": "敵進化日数1200日",
+        "description": "敵進化日数1200日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 10 } ]
+      },
+      { "level": 5, "name": "敵進化日数600日",
+        "description": "敵進化日数600日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 5 } ]
+      },
+      { "level": 6, "name": "敵進化日数480日",
+        "description": "敵進化日数480日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 4 } ]
+      },
+      { "level": 7, "name": "敵進化日数360日",
+        "description": "敵進化日数360日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 3 } ]
+      },
+      { "level": 8, "name": "敵進化日数240日",
+        "description": "敵進化日数240日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 2 } ]
+      },
+      { "level": 9, "name": "敵進化日数標準120日",
+        "description": "敵進化日数標準120日",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 1 } ]
+      },
+      { "level": 10, "name": "敵進化日数60日",
+        "description": "敵進化日数60日　敵の進化が早くなります",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 0.5} ]
+      },
+      { "level": 11, "name": "敵進化日数30日",
+        "description": "敵進化日数30日　敵の進化がかなり早くなります",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 0.25 } ]
+      },
+      { "level": 12, "name": "敵進化日数12日",
+        "description": "敵進化日数12日　敵の進化がすごい早くなります",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 0.1 } ]
+      },
+      { "level": 13, "name": "敵進化日数約1日",
+        "description": "敵進化日数1.2日　毎日敵が進化し、1週間以内に最高ランクの敵だらけになります。",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 0.01 } ]
+      },
+      { "level": 14, "name": "進化不能",
+        "description": "0倍速になり「敵対」ユニットは進化できなくなる",
+        "options": [ { "option": "EVOLUTION_INVERSE_MULTIPLIER", "type": "float", "val": 0.0 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_const",
+    "context": "WORLDGEN",
+    "name": "建設要求時間：標準は100％",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "建設要求時間を短くするとその分早く建設が終わります。",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 100} ]
+      },
+      { "level": 1, "name": "建設要求時間1%",
+        "description": "建設要求時間1%　大体の工事は1分以内に終わります。",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 1} ]
+      },
+      { "level": 2, "name": "建設要求時間2%",
+        "description": "建設要求時間5%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 2} ]
+      },
+      { "level": 3, "name": "建設要求時間10%",
+        "description": "建設要求時間10%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 10 } ]
+      },
+      { "level": 4, "name": "建設要求時間20%",
+        "description": "建設要求時間20%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 20 } ]
+      },
+      { "level": 5, "name": "建設要求時間30%",
+        "description": "建設要求時間30%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 30 } ]
+      },
+      { "level": 6, "name": "建設要求時間40%",
+        "description": "建設要求時間40%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 40 } ]
+      },
+      { "level": 7, "name": "建設要求時間50%",
+        "description": "建設要求時間50%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 50 } ]
+      },
+      { "level": 8, "name": "建設要求時間60%",
+        "description": "建設要求時間60%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 60 } ]
+      },
+      { "level": 9, "name": "建設要求時間70%",
+        "description": "建設要求時間70%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 70 } ]
+      },
+      { "level": 10, "name": "建設要求時間標準80%",
+        "description": "建設要求時間標準80%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 80 } ]
+      },
+      { "level": 11, "name": "建設要求時間90%",
+        "description": "建設要求時間90%",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 90 } ]
+      },
+      { "level": 12, "name": "建設要求時間100%標準",
+        "description": "建設要求時間100%標準",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 100 } ]
+      },
+      { "level": 13, "name": "建設要求時間150%遅くなる",
+        "description": "建設要求時間150％遅くなる",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 150 } ]
+      },
+      { "level": 14, "name": "建設要求時間200%遅くなる",
+        "description": "建設要求時間200％遅くなる",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 200 } ]
+      },
+      { "level": 14, "name": "建設要求時間300%遅くなる(動作不安定)",
+        "description": "建設要求時間300％遅くなる。　30分で終わる作業が90分かかります。",
+        "options": [ { "option": "CONSTRUCTION_SCALING", "type": "int", "val": 300 } ]
+      }
+    ]
+  },
+
+    {
+    "type": "option_slider",
+    "id": "add_world_syuukisd",
+    "context": "WORLDGEN",
+    "name": "季節の周期：標準は90日（正確には91日）",
+    "default": 0,
+    "levels": [
+      { "level": 0, "name": "デフォルト",
+        "description": "季節の周期91日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 91} ]
+      },
+      { "level": 1, "name": "季節の周期14日",
+        "description": "季節の周期14日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 14} ]
+      },
+      { "level": 2, "name": "季節の周期28日",
+        "description": "季節の周期28日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 28 } ]
+      },
+      { "level": 3, "name": "季節の周期42日",
+        "description": "季節の周期42日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 42 } ]
+      },
+      { "level": 4, "name": "季節の周期56日",
+        "description": "季節の周期56日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 56 } ]
+      },
+      { "level": 5, "name": "季節の周期61日",
+        "description": "季節の周期61日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 61 } ]
+      },
+      { "level": 6, "name": "季節の周期70日",
+        "description": "季節の周期70日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 70 } ]
+      },
+      { "level": 7, "name": "季節の周期84日",
+        "description": "季節の周期84日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 84 } ]
+      },
+      { "level": 8, "name": "季節の周期98日",
+        "description": "季節の周期98日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 98 } ]
+      },
+      { "level": 9, "name": "季節の周期標準112日",
+        "description": "季節の周期標準112日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 112 } ]
+      },
+      { "level": 10, "name": "季節の周期127日",
+        "description": "季節の周期127日",
+        "options": [ { "option": "SEASON_LENGTH", "type": "int", "val": 127 } ]
+      }
+    ]
+  },
+
+  {
+    "type": "option_slider",
+    "id": "world_cycle_sd",
+    "context": "WORLDGEN",
+    "name": "昼夜のサイクル",
+    "default": 0,
+    "levels": [
+      { "level": 0,  "name": "標準",
+        "description": "昼と夜を繰り返します。",
+        "options": [ { "option": "ETERNAL_TIME_OF_DAY", "type": "string", "val": "normal" } ]
+      },
+      {
+        "level": 1,  "name": "昼のみ",
+        "description": "夜が無くなり一日中昼の明るさになります。",
+        "options": [ { "option": "ETERNAL_TIME_OF_DAY", "type": "string", "val": "day" } ]
+      },
+      {
+        "level": 2,  "name": "夜のみ",
+        "description": "昼が無くなり一日中夜のような暗さを維持します。",
+        "options": [ { "option": "ETERNAL_TIME_OF_DAY", "type": "string", "val": "night" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "type": "option_slider",
+    "id": "world_season_sd",
+    "context": "WORLDGEN",
+    "name": "季節固定",
+    "default": 0,
+    "levels": [
+      { "level": 0,  "name": "標準",
+        "description": "季節は固定されません。",
+        "options": [ { "option": "ETERNAL_SEASON", "type": "string", "val": "false" } ]
+      },
+      {
+        "level": 1,  "name": "固定",
+        "description": "開始した季節に固定されます。",
+        "options": [ { "option": "ETERNAL_SEASON", "type": "string", "val": "true" } ]
+      }
+    ]
+  }      
+
+]

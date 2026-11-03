@@ -1,0 +1,9 @@
+{
+    "type": "MOD_INFO",
+    "id": "TEST_RUNDUM_DANGEON",
+    "name": "[RDD] 追加：簡易自動生成ダンジョン",
+    "authors": [ "Fisk", "Kelvine04546" ],
+    "description": "48*48タイルで階段以外の地形が自動生成される？洞窟を追加",
+    "category": "misc",
+    "dependencies": [ "dda" ]
+}

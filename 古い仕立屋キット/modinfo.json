@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "OLD_TAILORS_KIT",
+    "name": "追加：旧仕様の仕立屋キット出現",
+    "maintainers": [ "Fisk" ],
+    "description": "素材補強ができる古い仕様の仕立屋キットを復旧・出現させます",
+    "category": "misc",
+    "dependencies": [ "dda" ]
+  } 
+
+]

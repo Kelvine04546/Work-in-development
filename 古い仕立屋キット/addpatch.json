@@ -1,0 +1,529 @@
+[
+
+ {
+    "id": "tailors_kitold",
+    "looks_like": "tailors_kit",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
+    "name": { "str": "古い仕立屋キット" },
+    "description": "現存する仕立屋キットに0F時代の古い補強機能を追加します。システムが古いので補強成功率が明記されなかったり十分な裁縫スキルがあっても成功しにくい等のトラブルがあります。補強を試みる際は事前にセーブをお願いします。強化回数は2回が上限に近く、それ以上の強化を試みると高確率で失敗して破損します。成功率がかなり低いので補助として「装備時スキル+5」補正が入ります。",
+    "weight": "100 g",
+    "volume": "500 ml",
+    "price": "10 USD",
+    "price_postapoc": "10 USD",
+    "material": [ "plastic", "steel" ],
+    "symbol": ";",
+    "color": "red",
+    "sub": "sewing_kit",
+    "charges_per_use": 1,
+    "qualities": [ [ "SEW", 4 ], [ "SEW_CURVED", 1 ], [ "KNIT", 1 ], [ "LEATHER_AWL", 2 ], [ "CUT", 2 ], [ "FABRIC_CUT", 2 ] ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "thread": 400 } } ],
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "cotton",   "leather",  "lycra",  "nylon",  "wool",  "fur",  "faux_fur",
+          "nomex",    "kevlar",   "kevlar_layered",   "neoprene",  "gutskin",
+          "denim",  "canvas"  ],
+        "skill": "tailor",
+        "tool_quality": 1,
+        "cost_scaling": 0.1,
+        "move_cost": 800
+      },
+
+      {
+        "type": "sew_advanced",
+        "materials": [
+          "cotton",   "leather",  "lycra",  "nylon",  "wool",  "fur",  "faux_fur",
+          "nomex",    "kevlar",   "kevlar_layered",   "neoprene",  "gutskin",
+          "denim",  "canvas"   ],
+        "skill": "tailor",
+        "clothing_mods": [ 
+     "leather_padded_mod", "leather_padded_mod2", "steel_padded_mod",  "hard_steel_padded_mod",
+     "alloy_padded_mod",  "kevlar_padded_mod", "kevlar_padded_mod2",   "nylon_padded_mod",
+     "nylon_padded_mod2", "furred_mod", "furred_mod2",   "wooled_mod",  "wooled_mod2", "nomex_padded_mod", "nomex_padded_mod2",  "pocketed_mod", "pocketed_mod2","neoprene_padded_mod","neoprene_padded_mod2","lycra_padded_mod","lycra_padded_mod2","canvas_padded_mod","canvas_padded_mod2","cool_mod","cool_mod2" ]
+      }
+    ],
+    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "skills": [ { "value": "tailor", "add": 5 } ] } ],
+    "tool_ammo": [ "thread" ]
+  },
+
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "tailors_kitold",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "1 m",
+    "autolearn": true,
+    "reversible": true,
+    "decomp_learn": 3,
+    "book_learn": [ [ "textbook_tailor", 3 ], [ "manual_tailor", 3 ] ],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+      [ [ "sewing_kit", 1 ] ],
+      [ [ "scissors", 1 ] ],
+      [ [ "kevlar_shears", 1 ] ],
+      [ [ "knitting_needles", 1 ] ],
+      [ [ "awl_steel", 1 ] ],
+      [ [ "needle_curved", 1 ] ],
+      [ [ "plastic_chunk", 3 ] ]
+    ]
+  },
+
+  {
+    "id": "SUS_tailoring_tool_drawer",
+    "copy-from": "SUS_tailoring_tool_drawer",
+    "type": "item_group",
+    "subtype": "collection",
+    "extend": {
+      "entries": [
+        { "item": "tailors_kitold", "prob": 75, "charges": [ 0, -1 ] }
+      ] }
+    },
+
+  {
+    "id": "tools_tailor",
+    "copy-from": "tools_tailor",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+      "entries": [
+        { "item": "tailors_kitold", "prob": 10, "charges": [ 0, -1 ] }
+      ] }
+    },
+
+  {
+    "id": "tools_commercial_tailor",
+    "copy-from": "tools_commercial_tailor",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+      "entries": [
+        { "item": "tailors_kitold", "prob": 120, "charges": [ 0, -1 ] }
+      ] }
+    },
+
+ {
+    "id": "furred_mod",
+    "type": "json_flag",
+    "info": "毛皮の裏地を縫い付けることにより <good>暖かさが大きく上昇</good> するが <bad>動作制限悪化</bad>."
+  },
+  {
+    "id": "kevlar_padded_mod",
+    "type": "json_flag",
+    "info": "ケブラーを裏地に縫い付けることにより <good>銃弾耐性が大きく上昇</good> するが <bad>動作制限悪化</bad>."
+  },
+  {
+    "id": "nylon_padded_mod",
+    "type": "json_flag",
+    "info": "合成繊維を裏地に縫い付ける事より <good>防御力が軽度上昇</good> するが <bad>動作制限軽度悪化</bad>."
+  },
+  {
+    "id": "leather_padded_mod",
+    "type": "json_flag",
+    "info": "革素材を裏地に縫い付ける事より <good>防御力が上昇</good> するが <bad>動作制限悪化</bad>."
+  },
+  {
+    "id": "nomex_padded_mod",
+    "type": "json_flag",
+    "info": "ノーメックス繊維を裏地に縫い付ける事より <good>熱ダメージを軽減</good> するが <bad>動作制限悪化</bad>."
+  },
+  {
+    "id": "steel_padded_mod",
+    "type": "json_flag",
+    "info": "板金Sを裏地に仕込むことで <good>防御力が上昇</good> するが <bad>動作制限大きく悪化</bad>."
+  },
+  {
+    "id": "hard_steel_padded_mod",
+    "type": "json_flag",
+    "info": "板金を裏地に仕込むことで <good>防御力が大きく上昇</good> するが <bad>動作制限大幅悪化</bad>."
+  },
+  {
+    "id": "alloy_padded_mod",
+    "type": "json_flag",
+    "info": "超合金を裏地に仕込むことで <good>防御力が非常に大きく</good> するが <bad>動作制限悪化</bad>."
+  },
+  {
+    "id": "pocketed_mod",
+    "type": "json_flag",
+    "info": "綿繊維を裏地に縫い付ける事より <good>暖かさが少し上昇</good> するが <bad>動作制限微量悪化</bad>."
+  },
+  {
+    "id": "wooled_mod",
+    "type": "json_flag",
+    "info": "羊毛を裏地に縫い付けることで <good>暖かさが大きく上昇する</good>するが <bad>動作制限軽度悪化</bad> ."
+  },
+  {
+    "id": "neoprene_padded_mod",
+    "type": "json_flag",
+    "info": "ネオプレンを裏地に縫い付けることで <good>耐酸防御力が上昇</good>するが <bad>動作制限微量悪化</bad> ."
+  },
+  {
+    "id": "lycra_padded_mod",
+    "type": "json_flag",
+    "info": "ライクラを裏地に縫い付けることで <good>動作制限改善</good>するが <bad>少し防御力が落ちるかもしれない</bad> ."
+  },
+  {
+    "id": "canvas_padded_mod",
+    "type": "json_flag",
+    "info": "帆布を裏地に縫い付けることで <good>斬撃耐性が上昇する</good>が <bad>動作制限悪化</bad> ."
+  },
+  {
+    "id": "cool_mod",
+    "type": "json_flag",
+    "info": "隙間を作ることで <good>暖かさ減少と動作制限軽減</good>するが <bad>寒さに弱くなる</bad> ."
+  },
+  {
+    "id": "cool_mod2",
+    "type": "json_flag",
+    "info": "生地を削ることで <good>動作制限を改善</good>させるが <bad>装甲が低下する</bad> ."
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "leather_padded_mod",
+    "flag": "leather_padded_mod",
+    "item": "sheet_leather_patchwork",
+    "implement_prompt": "継ぎ革生地で補強",
+    "destroy_prompt": "補強した革部分を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 2 },
+      { "type": "cut", "value": 2 },
+      { "type": "bullet", "value": 2 },
+      { "type": "encumbrance", "value": 2, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "leather_padded_mod2",
+    "flag": "leather_padded_mod",
+    "item": "sheet_leather",
+    "implement_prompt": "革生地で補強",
+    "destroy_prompt": "補強した革部分を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 2 },
+      { "type": "cut", "value": 2 },
+      { "type": "bullet", "value": 2 },
+      { "type": "encumbrance", "value": 2, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "steel_padded_mod",
+    "flag": "steel_padded_mod",
+    "item": "sheet_metal_small",
+    "implement_prompt": "板金Sで補強",
+    "destroy_prompt": "補強した板金Sを破棄",
+    "mod_value": [
+      { "type": "bash", "value": 4 },
+      { "type": "cut", "value": 4 },
+      { "type": "bullet", "value": 4 },
+      { "type": "encumbrance", "value": 7, "round_up": true  }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "hard_steel_padded_mod",
+    "flag": "hard_steel_padded_mod",
+    "item": "sheet_metal",
+    "implement_prompt": "板金で補強",
+    "destroy_prompt": "補強した板金を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 6 },
+      { "type": "cut", "value": 6 },
+      { "type": "bullet", "value": 6 },
+      { "type": "encumbrance", "value": 10, "round_up": true  }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "alloy_padded_mod",
+    "flag": "alloy_padded_mod",
+    "item": "alloy_sheet",
+    "implement_prompt": "超合金で補強",
+    "destroy_prompt": "補強した超合金を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 13 },
+      { "type": "cut", "value": 13 },
+      { "type": "bullet", "value": 18 },
+      { "type": "encumbrance", "value": 7, "round_up": true  }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "kevlar_padded_mod",
+    "flag": "kevlar_padded_mod",
+    "item": "sheet_kevlar_patchwork",
+    "implement_prompt": "継ぎケブラー生地で補強",
+    "destroy_prompt": "補強したケブラーを破棄",
+    "mod_value": [
+      { "type": "bash", "value": 2 },
+      { "type": "cut", "value": 2 },
+      { "type": "bullet", "value": 9 },
+      { "type": "encumbrance", "value": 3, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "kevlar_padded_mod2",
+    "flag": "kevlar_padded_mod",
+    "item": "sheet_kevlar",
+    "implement_prompt": "ケブラー生地で補強",
+    "destroy_prompt": "補強したケブラーを破棄",
+    "mod_value": [
+      { "type": "bash", "value": 2 },
+      { "type": "cut", "value": 2 },
+      { "type": "bullet", "value": 9 },
+      { "type": "encumbrance", "value": 3, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "nylon_padded_mod",
+    "flag": "nylon_padded_mod",
+    "item": "sheet_nylon_patchwork",
+    "implement_prompt": "継ぎ生地合成繊維で補強",
+    "destroy_prompt": "補強した合成繊維を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 1 },
+      { "type": "cut", "value": 1 },
+      { "type": "bullet", "value": 1 },
+      { "type": "encumbrance", "value": 0.5, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "nylon_padded_mod2",
+    "flag": "nylon_padded_mod",
+    "item": "sheet_nylon",
+    "implement_prompt": "合成繊維生地で補強",
+    "destroy_prompt": "補強した合成繊維を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 1 },
+      { "type": "cut", "value": 1 },
+      { "type": "bullet", "value": 1 },
+      { "type": "encumbrance", "value": 0.5, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "furred_mod",
+    "flag": "furred_mod",
+    "item": "sheet_fur_patchwork",
+    "implement_prompt": "継ぎ毛皮生地で補強",
+    "destroy_prompt": "補強した毛皮を破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 4 },
+      { "type": "warmth", "value": 30 }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "furred_mod2",
+    "flag": "furred_mod",
+    "item": "integrated_fur",
+    "implement_prompt": "毛皮で補強",
+    "destroy_prompt": "補強した毛皮を破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 4 },
+      { "type": "warmth", "value": 30 }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "wooled_mod",
+    "flag": "wooled_mod",
+    "item": "sheet_felt_patchwork",
+    "implement_prompt": "継ぎフェルト生地で補強",
+    "destroy_prompt": "補強したフェルトを破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 3 },
+      { "type": "warmth", "value": 20 }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "wooled_mod2",
+    "flag": "wooled_mod",
+    "item": "sheet_felt",
+    "implement_prompt": "フェルト生地で補強",
+    "destroy_prompt": "補強したフェルトを破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 3 },
+      { "type": "warmth", "value": 20 }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "nomex_padded_mod",
+    "flag": "nomex_padded_mod",
+    "item": "sheet_nomex_patchwork",
+    "implement_prompt": "継ぎノーメックス生地で補強",
+    "destroy_prompt": "補強したノーメックスを破棄",
+    "mod_value": [
+      { "type": "fire", "value": 15 },
+      { "type": "encumbrance", "value": 1, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "nomex_padded_mod2",
+    "flag": "nomex_padded_mod",
+    "item": "sheet_nomex",
+    "implement_prompt": "ノーメックス生地で補強",
+    "destroy_prompt": "補強したノーメックスを破棄",
+    "mod_value": [
+      { "type": "fire", "value": 15 },
+      { "type": "encumbrance", "value": 1, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "pocketed_mod",
+    "flag": "pocketed_mod",
+    "item": "sheet_cotton_patchwork",
+    "implement_prompt": "継ぎ綿生地で補強",
+    "destroy_prompt": "補強した綿を破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 0.5 },
+      { "type": "warmth", "value": 3 }   ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "pocketed_mod2",
+    "flag": "pocketed_mod",
+    "item": "sheet_cotton",
+    "implement_prompt": "綿生地で補強",
+    "destroy_prompt": "補強した綿を破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": 1 },
+      { "type": "warmth", "value": 3 }   ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "neoprene_padded_mod",
+    "flag": "neoprene_padded_mod",
+    "item": "sheet_neoprene_patchwork",
+    "implement_prompt": "継ぎネオプレン生地で補強",
+    "destroy_prompt": "補強したネオプレンを破棄",
+    "mod_value": [
+      { "type": "acid", "value": 2 },
+      { "type": "encumbrance", "value": 0.5, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "neoprene_padded_mod2",
+    "flag": "neoprene_padded_mod",
+    "item": "sheet_neoprene",
+    "implement_prompt": "ネオプレン生地で補強",
+    "destroy_prompt": "補強したネオプレンを破棄",
+    "mod_value": [
+      { "type": "acid", "value": 2 },
+      { "type": "encumbrance", "value": 0.5, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "lycra_padded_mod",
+    "flag": "lycra_padded_mod",
+    "item": "sheet_lycra_patchwork",
+    "implement_prompt": "継ぎライクラ生地で補強",
+    "destroy_prompt": "補強したライクラを破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": -1, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "lycra_padded_mod2",
+    "flag": "lycra_padded_mod",
+    "item": "sheet_lycra",
+    "implement_prompt": "ライクラ生地で補強",
+    "destroy_prompt": "補強したライクラを破棄",
+    "mod_value": [
+      { "type": "encumbrance", "value": -1, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "canvas_padded_mod",
+    "flag": "canvas_padded_mod",
+    "item": "sheet_canvas_patchwork",
+    "implement_prompt": "継ぎ帆布生地で補強",
+    "destroy_prompt": "補強した帆布部分を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 1 },
+      { "type": "cut", "value": 4 },
+      { "type": "bullet", "value": 1 },
+      { "type": "encumbrance", "value": 2, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "canvas_padded_mod2",
+    "flag": "canvas_padded_mod",
+    "item": "sheet_canvas",
+    "implement_prompt": "帆布生地で補強",
+    "destroy_prompt": "補強した帆布部分を破棄",
+    "mod_value": [
+      { "type": "bash", "value": 1 },
+      { "type": "cut", "value": 4 },
+      { "type": "bullet", "value": 1 },
+      { "type": "encumbrance", "value": 2, "round_up": true  }
+    ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "cool_mod",
+    "flag": "cool_mod",
+    "item": "sheet_cotton_patchwork",
+    "implement_prompt": "通気性改善処理",
+    "destroy_prompt": "通気性を戻す",
+    "mod_value": [
+      { "type": "encumbrance", "value": -1 },
+      { "type": "warmth", "value": -5 }   ]
+  },
+
+  {
+    "type": "clothing_mod",
+    "id": "cool_mod2",
+    "flag": "cool_mod2",
+    "item": "sheet_cotton_patchwork",
+    "implement_prompt": "衣類軽量化処理",
+    "destroy_prompt": "軽量化部分を戻す",
+    "mod_value": [
+      { "type": "bash", "value": -1 },
+      { "type": "cut", "value": -1 },
+      { "type": "bullet", "value": -1 },
+      { "type": "encumbrance", "value": -3, "round_up": true  }
+    ]
+  }
+
+]
